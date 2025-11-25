@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88543b13c27b7764491068dc80e992e1, type: 3}
+  m_Name: Aether
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: item_cons_aether
+  <Stackable>k__BackingField: 1
+  <Cost>k__BackingField: 4
+  itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 558860714700800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  itemDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 558889068195840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: fc3f18778105fe74c9f9832e86b4581d, type: 3}
+  effect:
+    rid: 1771278590368022822
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278590368022822
+      type: {class: AetherItem, ns: , asm: Assembly-CSharp}
+      data:
+        <CanBeUsed>k__BackingField: 1
+        value: 30
+        isPercentage: 0

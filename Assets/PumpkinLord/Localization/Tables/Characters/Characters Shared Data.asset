@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Characters Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Characters
+  m_TableCollectionNameGuidString: aa9921d1569ecc64f851e4bfd64ec759
+  m_Entries:
+  - m_Id: 5035323392
+    m_Key: player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38749138944
+    m_Key: enemy_farmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451391971291136
+    m_Key: system
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822759169814528
+    m_Key: enemy_doctor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822778568470528
+    m_Key: enemy_kid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822883660951552
+    m_Key: enemy_servant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822911653736448
+    m_Key: enemy_ichabod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822940367941632
+    m_Key: enemy_katrina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3822958680272896
+    m_Key: enemy_brombones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3823064695500800
+    m_Key: ichabod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3823094340841472
+    m_Key: katrina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3823142634057728
+    m_Key: brom_bones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3823217225560064
+    m_Key: mammon
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1771278427164770375
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278427164770375
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1760701422705

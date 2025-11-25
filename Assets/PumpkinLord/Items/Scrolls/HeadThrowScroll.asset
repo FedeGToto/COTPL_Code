@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88543b13c27b7764491068dc80e992e1, type: 3}
+  m_Name: HeadThrowScroll
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: item_scroll_headthrow
+  <Stackable>k__BackingField: 0
+  <Cost>k__BackingField: 120
+  itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 564992220917760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  itemDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 11535525833928704
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: magic
+      variable:
+        rid: 3811780849964154966
+  icon: {fileID: 21300000, guid: 143e432320e81904fa38df4c6afb7178, type: 3}
+  effect:
+    rid: 1771278590368022834
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278590368022834
+      type: {class: HeadThrowMagic, ns: , asm: Assembly-CSharp}
+      data:
+        <SpellName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 200502472704
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <SpellDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 246048419840
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: item_needed
+            variable:
+              rid: 1771278675162693725
+        <Cost>k__BackingField: 100
+        <CostIsPercentage>k__BackingField: 1
+        magicText:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 1191248067096576
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: player
+            variable:
+              rid: 1771278675162693724
+        itemNeeded: item_cons_pumpkin
+        attackMultiplier: 2
+    - rid: 1771278675162693724
+      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: Dullahan
+    - rid: 1771278675162693725
+      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+        m_TableEntryReference:
+          m_KeyId: 565256487235584
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - rid: 3811780849964154966
+      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+        m_TableEntryReference:
+          m_KeyId: 200502472704
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []

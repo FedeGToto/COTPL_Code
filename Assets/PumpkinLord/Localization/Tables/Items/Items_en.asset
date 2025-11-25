@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Items_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 81f5288c674580e4893858d00d79775c, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 3811780849964154964
+  m_TableData:
+  - m_Id: 27776839680
+    m_Localized: "A sword made up of sharpened bones. It\u2019s very useful to chop
+      heads off the body of a person. ATK +1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61415157760
+    m_Localized: "A sword with a blade made of a special demonic iron. With this,
+      necks are like butter. Money Back Guarantee. \nATK + 10"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5169541120
+    m_Localized: Bone Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40175202304
+    m_Localized: Iron Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558684755259392
+    m_Localized: Potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558713612070912
+    m_Localized: 'A strange hot liquid. Screams are coming from the bottle.
+
+      Heals
+      100HP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558860714700800
+    m_Localized: Aether
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558889068195840
+    m_Localized: 'A cold luminescent liquid. You can see your headless reflection
+      on the bottle.
+
+      Restore 30MP.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564795361259520
+    m_Localized: Heal Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564956678385664
+    m_Localized: Fire Ball Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564992220917760
+    m_Localized: Head Throw Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565256487235584
+    m_Localized: Pumpkin Head
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565302242897920
+    m_Localized: Revives Dullahan when they die. Single-use.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11535314008993792
+    m_Localized: Flaming Sword Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11535525833928704
+    m_Localized: Unlocks [{magic}] magic during battles.
+    m_Metadata:
+      m_Items:
+      - rid: 3811780849964154964
+  references:
+    version: 2
+    RefIds:
+    - rid: 3811780849964154964
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 11535525833928704

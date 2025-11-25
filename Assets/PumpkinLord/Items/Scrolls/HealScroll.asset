@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88543b13c27b7764491068dc80e992e1, type: 3}
+  m_Name: HealScroll
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: item_scroll_heal
+  <Stackable>k__BackingField: 0
+  <Cost>k__BackingField: 30
+  itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 564795361259520
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  itemDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 11535525833928704
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: magic
+      variable:
+        rid: 3811780849964154967
+  icon: {fileID: 21300000, guid: c6b61c7fd151f474d8088d5a5b190771, type: 3}
+  effect:
+    rid: 1771278590368022832
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278590368022832
+      type: {class: HealMagic, ns: , asm: Assembly-CSharp}
+      data:
+        <SpellName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 3747672064
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <SpellDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 27495821312
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <Cost>k__BackingField: 20
+        <CostIsPercentage>k__BackingField: 0
+        magicText:
+          m_TableReference:
+            m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+          m_TableEntryReference:
+            m_KeyId: 1179779602640896
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: player
+            variable:
+              rid: 1771278675162693720
+        isPercentage: 1
+        healValue: 0.25
+    - rid: 1771278675162693720
+      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: Dullahan
+    - rid: 3811780849964154967
+      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+        m_TableEntryReference:
+          m_KeyId: 3747672064
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []

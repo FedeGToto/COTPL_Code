@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialogues Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dialogues
+  m_TableCollectionNameGuidString: 43165f478bb6a344883c36b2822c3685
+  m_Entries:
+  - m_Id: 287601204457472
+    m_Key: horse_l1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 287636101066752
+    m_Key: horse_l2_c1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 287651963924480
+    m_Key: horse_l2_c2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303936332427264
+    m_Key: horse_l2_c3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303947430555648
+    m_Key: horse_l2_c4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303955504590848
+    m_Key: horse_l2_c5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303963381493760
+    m_Key: horse_l2_c6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2857279399456768
+    m_Key: souls_requirement_l1
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1771278513750933809
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278513750933809
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1760975842589

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Items Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Items
+  m_TableCollectionNameGuidString: 81f5288c674580e4893858d00d79775c
+  m_Entries:
+  - m_Id: 5169541120
+    m_Key: bonesword_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27776839680
+    m_Key: bonesword_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40175202304
+    m_Key: ironsword_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61415157760
+    m_Key: ironsword_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558684755259392
+    m_Key: potion_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558713612070912
+    m_Key: potion_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558860714700800
+    m_Key: aether_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 558889068195840
+    m_Key: aether_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564795361259520
+    m_Key: scroll_heal_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564956678385664
+    m_Key: scroll_fireball_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 564992220917760
+    m_Key: scroll_headthrow_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565256487235584
+    m_Key: pumpkinhead_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565302242897920
+    m_Key: pumpkinhead_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11535314008993792
+    m_Key: scroll_flamethrower_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11535525833928704
+    m_Key: scroll_generic_desc
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1771278566600212558
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278566600212558
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1761169637728

@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UserInterface_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: edaf7c34811d3044aa160bc2d28b1bfc, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 1771278204849094873
+  m_TableData:
+  - m_Id: 20550053888
+    m_Localized: Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134463156224
+    m_Localized: ATK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159331184640
+    m_Localized: Physical Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226490380288
+    m_Localized: Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 259893817344
+    m_Localized: POW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276557787136
+    m_Localized: Magical attack value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 302096904192
+    m_Localized: Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327971565568
+    m_Localized: RES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347160506368
+    m_Localized: Physical defense value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367049895936
+    m_Localized: Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 408913244160
+    m_Localized: SHD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 426797756416
+    m_Localized: Magical defense value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733049057280
+    m_Localized: '{name} ({short})'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 2435352780402688
+    m_Localized: '<rewiredElement playerId=0 actionName="ThrowDice" type="glyph">
+
+      Throw'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3565907068645376
+    m_Localized: '{enemyHealth:cond:>2?Attack|Kill}'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 3565942061723648
+    m_Localized: Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3565979663659008
+    m_Localized: Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3566008654688256
+    m_Localized: Escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3812951159009280
+    m_Localized: '{name} wants to fight!'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 3813015747096576
+    m_Localized: '{name} needs to defend their family.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 3813102447554560
+    m_Localized: '{name} wants to get your soul.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 6396835839143936
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6396985181532160
+    m_Localized: Surrender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6397064198025216
+    m_Localized: INVENTORY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6397175502270464
+    m_Localized: EQUIPMENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630517354688512
+    m_Localized: Dullahan is swinging their weapon...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630634203803648
+    m_Localized: Dullahan goes for the kill...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630696866705408
+    m_Localized: Dullahan is attacking...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630784875786240
+    m_Localized: Dullahan tries to run for their life...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630882233970688
+    m_Localized: Dullahan finds the situation to difficult...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7630938475393024
+    m_Localized: Dullahan tries to escape...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7637299678474240
+    m_Localized: SHOP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7637483804225536
+    m_Localized: Dullahan have slayed an enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7637994104221696
+    m_Localized: '{name.UnitName} is taking their turn.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 7639201094889472
+    m_Localized: Farmer swings their axe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7639627202621440
+    m_Localized: Farmer tries to escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7639777706831872
+    m_Localized: '{name.UnitName} has escaped.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 7639846229176320
+    m_Localized: '{name.UnitName} failed to escape.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 17286115495047168
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286173170921472
+    m_Localized: Encyclopedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286215562752000
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286243865915392
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286387822817280
+    m_Localized: Game Modes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286739963998208
+    m_Localized: Sleepy Hollow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17286964699000832
+    m_Localized: 'Assault the sleepy hollow village in your annual resurrection on
+      October 31st.
+
+
+      Throw the dice and try to get as many souls as you can.
+      You need 20 to challenge the boss in the Church.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17302750679330816
+    m_Localized: Quit Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17302838784880640
+    m_Localized: Are you sure you want to quit the game? Any unsaved data will be
+      lost.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17302966530797568
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17303032859521024
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17313308287758336
+    m_Localized: Burn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17313360771084288
+    m_Localized: Poison
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278204849094873
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 733049057280
+        - id: 3812951159009280
+        - id: 3813015747096576
+        - id: 3813102447554560
+        - id: 3565907068645376
+        - id: 7637994104221696
+        - id: 7639777706831872
+        - id: 7639846229176320

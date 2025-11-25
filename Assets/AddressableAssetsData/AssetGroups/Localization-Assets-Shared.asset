@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: be94ba762a2975945a437854a400055f
+  m_SerializeEntries:
+  - m_GUID: 420f4e8343b1ace4ca10723e58710598
+    m_Address: Assets/PumpkinLord/Localization/Tables/Magic/Magic Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43165f478bb6a344883c36b2822c3685
+    m_Address: Assets/PumpkinLord/Localization/Tables/Dialogues/Dialogues Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81f5288c674580e4893858d00d79775c
+    m_Address: Assets/PumpkinLord/Localization/Tables/Items/Items Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa9921d1569ecc64f851e4bfd64ec759
+    m_Address: Assets/PumpkinLord/Localization/Tables/Characters/Characters Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edaf7c34811d3044aa160bc2d28b1bfc
+    m_Address: Assets/PumpkinLord/Localization/Tables/UserInterface/UserInterface
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 723053d40054f60408e1b811957f51db, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9f8c7b47dfa6b414297410bdb15a28a3, type: 2}
+    - {fileID: 11400000, guid: 61a84abc26219f5429fffb5e7a0fdf6b, type: 2}

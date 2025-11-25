@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88543b13c27b7764491068dc80e992e1, type: 3}
+  m_Name: BoneSword
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: item_equip_bonesword
+  <Stackable>k__BackingField: 0
+  itemName:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 5169541120
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  itemDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+    m_TableEntryReference:
+      m_KeyId: 27776839680
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: 05c9502e449566645baffb9bc8d0957c, type: 3}
+  effect:
+    rid: 1771278566600212557
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278566600212557
+      type: {class: BaseEquip, ns: , asm: Assembly-CSharp}
+      data:
+        stat: attack_phy
+        statBuff: 1

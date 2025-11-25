@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7f40115d0b53e49be7c3172eb6d5f4, type: 3}
+  m_Name: Ichabod
+  m_EditorClassIdentifier: 
+  enemyName:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa9921d1569ecc64f851e4bfd64ec759
+    m_TableEntryReference:
+      m_KeyId: 3822911653736448
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <Enemy>k__BackingField: {fileID: 8484611512263023567, guid: 9f3437163fb35954a94b91bbc379e8bf, type: 3}
+  <BaseStats>k__BackingField: {fileID: 11400000, guid: d461ef1f75774284baf256185e4c132e, type: 2}
+  references:
+    version: 2
+    RefIds: []

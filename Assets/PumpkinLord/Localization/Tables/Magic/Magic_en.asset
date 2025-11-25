@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Magic_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 420f4e8343b1ace4ca10723e58710598, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 1771278675162693719
+  m_TableData:
+  - m_Id: 3747672064
+    m_Localized: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27495821312
+    m_Localized: Heals Dullahan 25% of their max HP.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68696469504
+    m_Localized: Fire Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105405018112
+    m_Localized: Dullahan casts a fire ball that deals POW damages.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200502472704
+    m_Localized: Head Throw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 246048419840
+    m_Localized: "Dullahan throws their head to the enemy, killing them if they aren't
+      a boss, otherwise, they\u2019ll deal POWx2 damages. If Dullahan has a [{item_needed}]
+      in their Inventory, the cost of this spell is the item instead."
+    m_Metadata:
+      m_Items:
+      - rid: 1771278675162693719
+  - m_Id: 1179779602640896
+    m_Localized: '{player} casts an heal magic on themself.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278675162693719
+  - m_Id: 1186259231895552
+    m_Localized: '{player} casts a fire ball on the enemy.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278675162693719
+  - m_Id: 1191248067096576
+    m_Localized: '{player} throws their head towards the enemy.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278675162693719
+  - m_Id: 10971269811990528
+    m_Localized: '{player} sets their sword aflame.'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278675162693719
+  - m_Id: 10971218989608960
+    m_Localized: Flaming Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10971259368173568
+    m_Localized: Dullahan sets their sword aflame and slashes the enemy, dealing
+      POW damage and <color=red>burning</color> the enemy for 3 turns.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1771278675162693719
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1179779602640896
+        - id: 1186259231895552
+        - id: 1191248067096576
+        - id: 246048419840
+        - id: 10971269811990528
