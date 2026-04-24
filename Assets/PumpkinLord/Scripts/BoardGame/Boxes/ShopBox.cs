@@ -15,5 +15,6 @@ public class ShopBox : BoxEffect
     private void OnShopClose(CloseShopEvent e)
     {
         shopCamera.gameObject.SetActive(false);
+        (GameManager.Instance.GameMode as BoardGameMode).StartNextTurn();
     }
 }

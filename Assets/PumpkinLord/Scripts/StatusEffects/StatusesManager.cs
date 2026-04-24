@@ -33,19 +33,21 @@ public class StatusesManager : MonoBehaviour
         OnStatusRemoved?.Invoke(effect);
     }
 
+    public List<StatusEffect> GetAllStatuses() => statusEffects;
+
     public void CheckStartTurn()
     {
-        foreach (var effect in statusEffects)
+        for (int i = statusEffects.Count - 1; i >= 0; i--)
         {
-            effect.OnTurnStart();
+            statusEffects[i].OnTurnStart();
         }
     }
 
     public void CheckEndTurn()
     {
-        foreach (var effect in statusEffects)
+        for (int i = statusEffects.Count - 1; i >= 0; i--)
         {
-            effect.OnTurnEnd();
+            statusEffects[i].OnTurnEnd();
         }
     }
 

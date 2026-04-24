@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPool:
   - {fileID: 11400000, guid: 45eadb4494de02143898d8039ab28e09, type: 2}
+  - {fileID: 11400000, guid: 7603db1416c7d344ca9acd3a57fa3d42, type: 2}
 --- !u!1 &5813619506067673002
 GameObject:
   m_ObjectHideFlags: 0

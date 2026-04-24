@@ -70,6 +70,7 @@ PlayerSettings:
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 0
+  androidDisplayOptions: 1
   androidBlitType: 0
   androidResizeableActivity: 1
   androidDefaultWindowWidth: 1920
@@ -141,7 +142,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
+  bundleVersion: 0.1.2
   preloadedAssets:
   - {fileID: 11400000, guid: e7c5a2273504bd846aa2396a43d5b631, type: 2}
   - {fileID: 11400000, guid: b60b0780c1bc6dd44908acfe00edbf23, type: 2}
@@ -830,7 +831,7 @@ PlayerSettings:
     GameCoreXboxOne: DOTWEEN
     Kepler: DOTWEEN
     LinuxHeadlessSimulation: DOTWEEN
-    Nintendo Switch: DOTWEEN
+    Nintendo Switch: DOTWEEN;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;INK_RUNTIME;INK_EDITOR
     Nintendo Switch 2: DOTWEEN
     PS4: DOTWEEN
     PS5: DOTWEEN

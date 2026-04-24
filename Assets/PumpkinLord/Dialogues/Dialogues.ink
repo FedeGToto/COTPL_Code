@@ -1,5 +1,6 @@
 EXTERNAL MoveTo(boxType)
 EXTERNAL StartBattle(enemyId)
+EXTERNAL StartNextTurn()
 
 ===HorseDialogue===
 #horse_l1
@@ -20,11 +21,13 @@ Where do you want to travel? (Pay 5% of your Health Points)  #portrait:none #spe
     ~ MoveTo("ShopBox")
     -> END
 * #horse_l2_c6
+    ~ StartNextTurn()
     -> END
 
 ===NotEnoughSouls===
 #souls_requirement_l1
 You need 20 Souls to challenge the Protector of the Church.  #portrait:none #speaker:system
+~StartNextTurn()
 ->END
 
 ===IchabodDialogue===

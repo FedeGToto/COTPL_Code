@@ -31,6 +31,8 @@ public class PlayerActionsUI : MonoBehaviour
             healthValue.Value = battle.EnemyUnit.Character.HealthPoints.Value;
             attackString.RefreshString();
         }
+
+        buttons[0].Select();
     }
 
     public void DisableButton()
@@ -50,7 +52,7 @@ public class PlayerActionsUI : MonoBehaviour
             float enemyHealth = battle.EnemyUnit.Character.HealthPoints.Value;
             if (enemyHealth > 1)
             {
-                battle.Attack(battle.PlayerUnit, battle.EnemyUnit);
+                battle.PlayerUnit.PhysAttack(battle.EnemyUnit);
 
                 var playerTurn = battle.FSM.currentState as PlayerTurnState;
                 playerTurn.EndTurn(1.5f);
@@ -64,15 +66,25 @@ public class PlayerActionsUI : MonoBehaviour
     public void Magic()
     {
         PlayerManager player = GameManager.Instance.Player;
-        DisableButton();
-        parent.UseList.OpenList(player.Inventory.GetMagicItems());
+        var magicItems = player.Inventory.GetMagicItems();
+
+        if (magicItems.Count > 0)
+        {
+            DisableButton();
+            parent.UseList.OpenList(player.Inventory.GetMagicItems());
+        }
     }
 
     public void Items()
     {
         PlayerManager player = GameManager.Instance.Player;
-        DisableButton();
-        parent.UseList.OpenList(player.Inventory.GetConsumableItems());
+        var consumableItems = player.Inventory.GetConsumableItems();
+
+        if (consumableItems.Count > 0)
+        {
+            DisableButton();
+            parent.UseList.OpenList(player.Inventory.GetConsumableItems());
+        }
     }
 
     public void Escape()

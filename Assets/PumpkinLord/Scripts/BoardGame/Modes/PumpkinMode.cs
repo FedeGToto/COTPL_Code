@@ -18,6 +18,7 @@ public class PumpkinMode : BoardGameMode
     [SerializeField] private BoxSO bonfireBox;
 
     [Header("Dices")]
+    public bool CanThrowDice;
     [SerializeField] private Dice[] dices;
     private int[] diceThrows;
     private bool diceLaunched;
@@ -28,8 +29,13 @@ public class PumpkinMode : BoardGameMode
     private int playerPosition;
     private int boxesToMove;
 
+    private int turns;
+
     public override void InitializeBoard()
     {
+        GameManager.Instance.Input.OnDiceThrow += ThrowDices;
+        EventManager.Instance.AddListener<BattleEndedEvent>(OnBattleEnd);
+
         var bonFireBoxes = boxes.Where((n, i) => (bonFireIDs.Contains(i))).ToList();
         bonFireBoxes.ForEach(o => o.Initialize(bonfireBox));
 
@@ -53,6 +59,20 @@ public class PumpkinMode : BoardGameMode
         {
             randomBoxes.Dequeue().Initialize(box);
         }
+
+        StartNextTurn();
+    }
+
+    private void OnBattleEnd(BattleEndedEvent e)
+    {
+        StartNextTurn();
+    }
+
+    public override void StartNextTurn()
+    {
+        turns++;
+
+        CanThrowDice = true;
     }
 
     public override void MovePlayerToNextPosition()
@@ -125,7 +145,10 @@ public class PumpkinMode : BoardGameMode
 
     public override void ThrowDices()
     {
+        if (!CanThrowDice) return;
         if (diceLaunched) return;
+
+        CanThrowDice = false;
 
         diceThrows = new int[dices.Length];
         diceLaunched = true;
@@ -145,29 +168,24 @@ public class PumpkinMode : BoardGameMode
 
         diceThrows[diceId] = diceThrow;
 
-        bool threwAllDices = true;
-
-        for (int i = 0; i < diceThrows.Length;i++)
+        for (int i = 0; i < diceThrows.Length; i++)
         {
-            if (dices[i].IsRolling)
-                threwAllDices = false;
+            if (diceThrows[i] == 0)
+                return;
         }
 
-        if (threwAllDices)
-        {
-            diceLaunched = false;
+        diceLaunched = false;
 
-            int result = 0;
-            foreach (var number in diceThrows)
-                result += number;
+        int result = 0;
+        foreach (var number in diceThrows)
+            result += number;
 
-            diceCamera.SetActive(false);
-            moveVolume.SetActive(true);
+        diceCamera.SetActive(false);
+        moveVolume.SetActive(true);
 
-            //Move the player
-            boxesToMove = result;
-            MovePlayerToNextPosition();
-        }
+        //Move the player
+        boxesToMove = result;
+        MovePlayerToNextPosition();
     }
 
     public override void StartBattle(EnemySO enemy)

@@ -31,6 +31,7 @@ public class ShopUI : MonoBehaviour
 
     public void OpenShop()
     {
+        GameManager.Instance.Input.ChangeContext(InputManager.InputContext.UserInterface);
         moneyText.text = GameManager.Instance.Player.Money.ToString();
         soulsText.text = GameManager.Instance.Player.Souls.ToString();
 
@@ -73,6 +74,7 @@ public class ShopUI : MonoBehaviour
         shopRect.anchoredPosition = new Vector2(openPos, shopRect.anchoredPosition.y);
         shopRect.DOAnchorPosX(closePos, animationDuration).OnComplete(() =>
         {
+            GameManager.Instance.Input.SetOldContext();
             gameObject.SetActive(false);
             EventManager.Instance.TriggerEvent(new CloseShopEvent());
         });

@@ -163,14 +163,6 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1771278204849094873
-  - m_Id: 7639201094889472
-    m_Localized: Farmer swings their axe.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7639627202621440
-    m_Localized: Farmer tries to escape
-    m_Metadata:
-      m_Items: []
   - m_Id: 7639777706831872
     m_Localized: '{name.UnitName} has escaped.'
     m_Metadata:
@@ -239,6 +231,42 @@ MonoBehaviour:
     m_Localized: Poison
     m_Metadata:
       m_Items: []
+  - m_Id: 63657728255520768
+    m_Localized: Deals damage each turn, decreasing both Health Points (HP) and Mana
+      Points (MP).
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63657756210556928
+    m_Localized: Deals true damage each turn until it's active.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64057128463167488
+    m_Localized: '{stat}: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 1771278204849094873
+  - m_Id: 64726282702745600
+    m_Localized: '<b>Attack</b> - Dullahan swings their sword and deals PHY DMG.
+      This attack cannot kill an enemy, leaving the enemy at 1 HP. When the enemy
+      is left with 1 HP, this attacks turns into <b>Kill</b>.
+
+
+      <b>Kill</b>
+      - Dullahan severs the head to the enemy and kills it, ending the battle.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140046900031488
+    m_Localized: Staggered
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140214496030720
+    m_Localized: Dullahan tries to act, but can't move.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140133143310336
+    m_Localized: The unit affected is staggered and cannot act for the next turn.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -255,3 +283,4 @@ MonoBehaviour:
         - id: 7637994104221696
         - id: 7639777706831872
         - id: 7639846229176320
+        - id: 64057128463167488

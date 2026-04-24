@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: be94ba762a2975945a437854a400055f
   m_SerializeEntries:
+  - m_GUID: 0183662eed9f98f4eb3d631ad6a46b23
+    m_Address: Assets/PumpkinLord/Localization/Tables/Enemies/Enemies Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 420f4e8343b1ace4ca10723e58710598
     m_Address: Assets/PumpkinLord/Localization/Tables/Magic/Magic Shared Data.asset
     m_ReadOnly: 1

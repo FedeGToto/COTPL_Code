@@ -12,6 +12,7 @@ public abstract class BoardGameMode : GameMode
     }
 
     public abstract void InitializeBoard();
+    public abstract void StartNextTurn();
     public abstract BoardBox GetBox();
     public abstract void GetNextBoxOfType(Type box);
     public abstract void MovePlayerToNextPosition();

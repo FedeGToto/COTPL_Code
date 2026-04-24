@@ -11,4 +11,6 @@ public partial class EnemyAI
     }
 
     public virtual void EvaluateNextAction() { }
+
+    public virtual string GetAttacksDescription() { return ""; }
 }

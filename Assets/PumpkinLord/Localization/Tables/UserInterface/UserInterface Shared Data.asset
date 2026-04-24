@@ -151,14 +151,6 @@ MonoBehaviour:
     m_Key: enemy_turn
     m_Metadata:
       m_Items: []
-  - m_Id: 7639201094889472
-    m_Key: farmer_attack
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7639627202621440
-    m_Key: farmer_escape
-    m_Metadata:
-      m_Items: []
   - m_Id: 7639777706831872
     m_Key: escape_success
     m_Metadata:
@@ -217,6 +209,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 17313360771084288
     m_Key: status_poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63657728255520768
+    m_Key: status_poison_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63657756210556928
+    m_Key: status_burn_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64057128463167488
+    m_Key: stats_value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64726282702745600
+    m_Key: attack_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140046900031488
+    m_Key: status_stagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140133143310336
+    m_Key: status_stagger_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65140214496030720
+    m_Key: status_stagger_text_player
     m_Metadata:
       m_Items: []
   m_Metadata:

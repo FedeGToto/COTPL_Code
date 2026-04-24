@@ -12,14 +12,11 @@ public class FireBallMagic : MagicItem
         Unit player = BattleSystem.Instance.PlayerUnit;
         Unit enemy = BattleSystem.Instance.EnemyUnit;
 
-        float attack = player.Character.Stats["attack_mag"].Value * attackMultiplier;
-        float defense = enemy.Character.Stats["defense_mag"].Value * defenseMultiplier;
-
         player.Character.ManaPoints.Value -= Cost;
 
         BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString()).OnComplete(() =>
         {
-            BattleSystem.Instance.Magic(player, enemy, attack, defense);
+            player.MagicAttack(enemy, attackMultiplier, defenseMultiplier);
 
             var playerTurn = BattleSystem.Instance.FSM.currentState as PlayerTurnState;
             playerTurn.EndTurn(1.5f);

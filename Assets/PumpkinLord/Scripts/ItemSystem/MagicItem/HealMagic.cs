@@ -22,7 +22,7 @@ public class HealMagic : MagicItem
 
         BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString()).OnComplete(() =>
         {
-            BattleSystem.Instance.Heal(player, value);
+            player.Heal(value);
 
             var playerTurn = BattleSystem.Instance.FSM.currentState as PlayerTurnState;
             playerTurn.EndTurn(1.5f);

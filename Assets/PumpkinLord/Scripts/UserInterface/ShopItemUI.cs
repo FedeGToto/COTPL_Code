@@ -7,8 +7,12 @@ public class ShopItemUI : Button
 {
     [SerializeField] private ShopUI parent;
 
+    [SerializeField] private string discountFormat = "<s><color={0}>{1}</color></s>\n{2}";
     [SerializeField] private Image artwork;
     [SerializeField] private TextMeshProUGUI cost;
+    [SerializeField] private Color discountColor = Color.gray;
+    [SerializeField] private GameObject discountIcon;
+    [SerializeField] private TextMeshProUGUI discountText;
 
     private ItemSO item;
     private float discount;
@@ -26,7 +30,10 @@ public class ShopItemUI : Button
         if (discount > 0)
         {
             //Open the discount image
-            cost.text = $"<s>{price}</s>\n{Mathf.RoundToInt(price * discount)}";
+            cost.text = string.Format(discountFormat, ColorUtility.ToHtmlStringRGBA(discountColor), price, Mathf.RoundToInt(price - (price * discount)));
+
+            discountText.text = $"-{(discount * 100):00}%";
+            discountIcon.SetActive(true);
         }
     }
 

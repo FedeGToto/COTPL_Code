@@ -12,15 +12,33 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private bool needsKillingBlow;
     public string UnitName { get; set; }
+    public string AttacksDescription { get; set; }
 
     public UnityEvent OnHeal;
     public UnityEvent OnTakeDamage;
     public UnityEvent OnDie;
     public UnityEvent OnAttack;
 
-    public void Attack()
+    public void PhysAttack(Unit target, float attackMultiplier = 1f, float defenseMultiplier = 1f)
     {
         OnAttack?.Invoke();
+
+        float attack = Character.Stats["attack_phy"].Value * attackMultiplier;
+        float defense = target.Character.Stats["defense_phy"].Value * defenseMultiplier;
+
+        float damage = BattleHelper.CalculateDamage(attack, defense);
+
+        BattleSystem.Instance.DealDamage(this, target, damage);
+    }
+
+    public void MagicAttack(Unit target, float attackMultiplier = 1f, float defenseMultiplier = 1f)
+    {
+        float attack = Character.Stats["attack_mag"].Value * attackMultiplier;
+        float defense = target.Character.Stats["defense_mag"].Value * defenseMultiplier;
+
+        float damage = BattleHelper.CalculateDamage(attack, defense);
+
+        BattleSystem.Instance.DealDamage(this, target, damage);
     }
 
     public void TakeDamage(Unit source, float damage)

@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
         unit.OnDie.AddListener(Die);
 
         AI.Setup(this);
+
+        Unit.AttacksDescription = AI.GetAttacksDescription();
     }
 
     public void Die()

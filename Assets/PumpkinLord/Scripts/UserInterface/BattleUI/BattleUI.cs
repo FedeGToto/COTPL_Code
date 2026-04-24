@@ -6,16 +6,14 @@ using UnityEngine.Localization;
 public class BattleUI : MonoBehaviour
 {
     [field: SerializeField] public List<LocalizedString> StarterTextes;
+    [field: SerializeField] public LocalizedString WinText { get; private set; }
+    [field: SerializeField] public LocalizedString EnemyTurnText { get; private set; }
 
     [Header("HUD")]
     [field: SerializeField] public ActionTextUI TextBox;
     [field: SerializeField] public BottomUI Bottom { get; private set; }
     [field: SerializeField] public UnitUI PlayerUI { get; private set; }
     [field: SerializeField] public UnitUI EnemyUI { get; private set; }
-
-    [Header("Textes")]
-    [field: SerializeField] public LocalizedString WinText { get; private set; }
-    [field: SerializeField] public LocalizedString EnemyTurnText { get; private set; }
 
     public void StartBattle()
     {

@@ -3096,6 +3096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rewired Input Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2921258394047638655, guid: 72feb541623c9cb4e9479171947eede9, type: 3}
+      propertyPath: _userData._joyConGripStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

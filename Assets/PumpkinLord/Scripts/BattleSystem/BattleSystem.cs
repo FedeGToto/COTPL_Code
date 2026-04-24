@@ -1,5 +1,7 @@
 using DG.Tweening;
+using QFSW.QC;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -53,6 +55,8 @@ public class BattleSystem : MonoBehaviour
             (item.Effect as ConsumableItem).BattleStart();
         }
         EventManager.Instance.AddListener<BattleEndedEvent>(OnBattleEnded);
+        GameManager.Instance.GetComponent<PauseSystem>().CanPause = false;
+        GameManager.Instance.Input.ChangeContext(InputManager.InputContext.UserInterface);
     }
 
     private void OnBattleEnded(BattleEndedEvent e)
@@ -64,25 +68,8 @@ public class BattleSystem : MonoBehaviour
         }
 
         EventManager.Instance.RemoveListener<BattleEndedEvent>(OnBattleEnded);
-    }
-
-    public void Attack(Unit source, Unit target)
-    {
-        source.Attack();
-
-        float attack = source.Character.Stats["attack_phy"].Value;
-        float defense = target.Character.Stats["defense_phy"].Value;
-
-        float damage = CalculateDamage(attack, defense);
-
-        DealDamage(source, target, damage);
-    }
-
-    public void Magic(Unit source, Unit target, float attackValue, float defenseValue)
-    {
-        float damage = CalculateDamage(attackValue, defenseValue);
-
-        DealDamage(source, target, damage);
+        GameManager.Instance.GetComponent<PauseSystem>().CanPause = true;
+        GameManager.Instance.Input.ChangeContext(InputManager.InputContext.Default);
     }
 
     public void Escape(Unit source, float chance)
@@ -121,19 +108,8 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void Heal(Unit character, float value)
-    {
-        character.Heal(value);
-    }
-
     public void DealDamage(Unit source, Unit target, float damage)
     {
         target.TakeDamage(source, damage);
-    }
-
-    public float CalculateDamage(float attack, float defense)
-    {
-        float dmg = attack - (defense / 2);
-        return Mathf.Clamp(dmg, 1, float.MaxValue);
     }
 }

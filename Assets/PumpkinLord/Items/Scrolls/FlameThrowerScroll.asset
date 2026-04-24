@@ -94,6 +94,15 @@ MonoBehaviour:
           m_FallbackState: 0
           m_WaitForCompletion: 0
           m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:edaf7c34811d3044aa160bc2d28b1bfc
+          m_TableEntryReference:
+            m_KeyId: 63657756210556928
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
         duration: 5
         damagePerTurn: 40
     - rid: 3811780849964154965

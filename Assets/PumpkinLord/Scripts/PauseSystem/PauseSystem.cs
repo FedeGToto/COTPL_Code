@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PauseSystem : MonoBehaviour
 {
+    public bool CanPause = true;
+
     [SerializeField] private InputManager input;
 
     [Header("UI")]
@@ -22,6 +24,8 @@ public class PauseSystem : MonoBehaviour
 
     public void PausePressed()
     {
+        if (!CanPause) return;
+
         isPaused = !isPaused;
 
         InputManager.InputContext context = isPaused ? InputManager.InputContext.UserInterface : InputManager.InputContext.Default;

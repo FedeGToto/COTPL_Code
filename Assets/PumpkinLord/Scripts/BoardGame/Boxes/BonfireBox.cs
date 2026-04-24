@@ -19,5 +19,7 @@ public class BonfireBox : BoxEffect
         player.ManaPoints.Value += health;
 
         healingAnimation.PlayFeedbacks();
+
+        (GameManager.Instance.GameMode as BoardGameMode).StartNextTurn();
     }
 }

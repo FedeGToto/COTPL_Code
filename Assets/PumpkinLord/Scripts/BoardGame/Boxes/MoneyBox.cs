@@ -7,5 +7,6 @@ public class MoneyBox : BoxEffect
     public override void ApplyBoxEffect()
     {
         GameManager.Instance.Player.Money += moneyToAdd;
+        (GameManager.Instance.GameMode as BoardGameMode).StartNextTurn();
     }
 }

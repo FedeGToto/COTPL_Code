@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Enemies_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0183662eed9f98f4eb3d631ad6a46b23, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 131434868736
+    m_Localized: Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384217182208
+    m_Localized: Farmer swings their axe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301815885824
+    m_Localized: Farmer swings their axe on Dullahan, dealing PHY DMG.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 548306743296
+    m_Localized: Secret Technique of the Family
+    m_Metadata:
+      m_Items: []
+  - m_Id: 551834152960
+    m_Localized: Farmer unleashes their family's secret technique and... tries to
+      escape Dullahan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 561564938240
+    m_Localized: Farmer tries to escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2228649783296
+    m_Localized: Doctor tries to cut a piece of your head!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2384166187008
+    m_Localized: Doctor launches a strange bottle against you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2498221895680
+    m_Localized: Doctor drinks a potion!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2214456258560
+    m_Localized: Scalpel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2218927386624
+    m_Localized: Doctor tries to stab Dullahan with a scalpel and deals PHY DMG.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2369855221760
+    m_Localized: Poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2374296989696
+    m_Localized: Doctor launches a bottle to Dullahan, dealing MAG DMG and inflicting
+      <color=yellow>Poison</color>.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2479620157440
+    m_Localized: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2484930146304
+    m_Localized: Doctor drinks a healing potion and restores Health Points.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1071911457058816
+    m_Localized: Slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1071945745494016
+    m_Localized: Ichabod uses his sword to slash Dullahan and kill him.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1071960924680192
+    m_Localized: Ichabod slashes his sword against Dullahan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2466072995360768
+    m_Localized: Lunge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2466110978977792
+    m_Localized: Ichabod attacks Dullahan lunging with his sword, dealing reduced
+      PHY DMG and <color=yellow>staggering</color> Dullahan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2466120634265600
+    m_Localized: Ichabod lunges with his sword.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

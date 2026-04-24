@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    public bool IsRolling => rb.linearVelocity != Vector3.zero && rb.angularVelocity != Vector3.zero;
+    public bool IsRolling => rb.linearVelocity.magnitude > 0.01f && rb.angularVelocity.magnitude > 0.01f;
 
     [SerializeField] private Vector3 startPosition;
-    [SerializeField] private float maxLanuchForce = 500;
+    [SerializeField] private float maxLaunchForce = 500;
 
     private Rigidbody rb;
 
@@ -18,15 +18,17 @@ public class Dice : MonoBehaviour
 
     public void Shoot()
     {
-        rb.isKinematic = true;
-        float dirX = Random.Range(0, maxLanuchForce);
-        float dirY = Random.Range(0, maxLanuchForce);
-        float dirZ = Random.Range(0, maxLanuchForce);
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
-        transform.SetPositionAndRotation(startPosition, Quaternion.identity);
+        Quaternion randomRotation = Random.rotation;
+        transform.SetPositionAndRotation(startPosition, randomRotation);
 
-        rb.isKinematic = false;
-        rb.AddForce(transform.up * maxLanuchForce);
-        rb.AddTorque(dirX, dirY, dirZ);
+        rb.AddForce(Vector3.up * maxLaunchForce, ForceMode.Impulse);
+
+        float dirX = Random.Range(-maxLaunchForce, maxLaunchForce);
+        float dirY = Random.Range(-maxLaunchForce, maxLaunchForce);
+        float dirZ = Random.Range(-maxLaunchForce, maxLaunchForce);
+        rb.AddTorque(dirX, dirY, dirZ, ForceMode.Impulse);
     }
 }

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:aa9921d1569ecc64f851e4bfd64ec759
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3822759169814528
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  <Enemy>k__BackingField: {fileID: 0}
+  <Enemy>k__BackingField: {fileID: 7433910478378237775, guid: c358d4e5a73b94945ad3aa5c68f9ad46, type: 3}
   <BaseStats>k__BackingField: {fileID: 11400000, guid: b2ecdaf3f52d7354981b22ab3b8e66a4, type: 2}
   references:
     version: 2

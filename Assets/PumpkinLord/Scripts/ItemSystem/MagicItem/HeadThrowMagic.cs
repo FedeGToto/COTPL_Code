@@ -29,10 +29,7 @@ public class HeadThrowMagic : MagicItem
             // Check if is boss
             if (BattleSystem.Instance.EnemyUnit.Tags.HasTag("Boss"))
             {
-                float attack = player.Character.Stats["attack_mag"].Value * attackMultiplier;
-                float defense = enemy.Character.Stats["defense_mag"].Value;
-
-                BattleSystem.Instance.Magic(player, enemy, attack, defense);
+                player.MagicAttack(enemy, attackMultiplier);
 
                 var playerTurn = BattleSystem.Instance.FSM.currentState as PlayerTurnState;
                 playerTurn.EndTurn(1.5f);
