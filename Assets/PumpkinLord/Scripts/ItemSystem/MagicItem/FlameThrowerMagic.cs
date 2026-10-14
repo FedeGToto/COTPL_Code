@@ -5,9 +5,13 @@ public class FlameThrowerMagic : FireBallMagic
 {
     [SerializeReference] private StatusEffect burnEffect;
 
-    public override void Use()
+    public override void Use(Unit caster)
     {
-        base.Use();
-        BattleSystem.Instance.EnemyUnit.Status.AddStatusEffect(burnEffect);
+        base.Use(caster);
+
+        foreach (var target in GetTargets())
+        {
+            target.Status.AddStatusEffect(burnEffect);
+        }
     }
 }

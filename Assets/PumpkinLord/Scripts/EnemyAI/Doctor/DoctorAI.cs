@@ -70,7 +70,7 @@ public class DoctorAI : EnemyAI
     public void Scalpel()
     {
         BattleSystem battleSystem = Owner.Unit.BattleSystem;
-        battleSystem.UI.TextBox.SetText(scalpelText.GetLocalizedString()).OnComplete(() =>
+        battleSystem.UI.TextBox.SetText(scalpelText.GetLocalizedString(), () =>
         {
             Owner.Unit.PhysAttack(battleSystem.PlayerUnit);
             var enemyTurn = battleSystem.FSM.currentState as EnemyTurnState;
@@ -81,7 +81,7 @@ public class DoctorAI : EnemyAI
     public void Poison()
     {
         BattleSystem battleSystem = Owner.Unit.BattleSystem;
-        battleSystem.UI.TextBox.SetText(poisonText.GetLocalizedString()).OnComplete(() =>
+        battleSystem.UI.TextBox.SetText(poisonText.GetLocalizedString(), () =>
         {
             battleSystem.PlayerUnit.Status.AddStatusEffect(poisonStatus);
             Owner.Unit.Character.ManaPoints.Value -= poisonCost;
@@ -94,7 +94,7 @@ public class DoctorAI : EnemyAI
     public void Heal()
     {
         BattleSystem battleSystem = Owner.Unit.BattleSystem;
-        battleSystem.UI.TextBox.SetText(healText.GetLocalizedString()).OnComplete(() =>
+        battleSystem.UI.TextBox.SetText(healText.GetLocalizedString(), () =>
         {
             Owner.Unit.Heal(Owner.Unit.Character.HealthPoints.Value * healValue);
             Owner.Unit.Character.ManaPoints.Value -= healCost;

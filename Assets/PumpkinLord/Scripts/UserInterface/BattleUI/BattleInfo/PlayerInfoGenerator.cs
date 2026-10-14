@@ -40,12 +40,12 @@ public class PlayerInfoGenerator : MonoBehaviour
     {
         var magic = item.Effect as MagicItem;
 
-        string spellName = magic.SpellName.GetLocalizedString();
-        string spellCost = magic.Cost.ToString();
-        if (magic.CostIsPercentage)
+        string spellName = magic.Spell.SpellName.GetLocalizedString();
+        string spellCost = magic.Spell.RealCost.ToString();
+        if (magic.Spell.CostIsPercentage)
             spellCost += "%";
         spellCost += " MP. ";
-        string spellDescription = magic.SpellDescription.GetLocalizedString();
+        string spellDescription = magic.Spell.SpellDescription.GetLocalizedString();
 
         result += "\n\n<b>" + spellName + "</b> - " + spellCost + spellDescription;
     }

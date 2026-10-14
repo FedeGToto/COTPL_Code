@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleInfoUI : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class BattleInfoUI : MonoBehaviour
     [SerializeField] private CinemachineCamera cameraObject;
     [SerializeField] private GameObject infoPanel;
     [SerializeField] private GameObject battleHud;
+    [SerializeField] private Button attackButton;
 
     [Header("Tabs")]
     [SerializeField] private TabMenu tabs;
@@ -23,7 +25,7 @@ public class BattleInfoUI : MonoBehaviour
         GameManager.Instance.Input.OnPause -= OpenInfo;
     }
 
-    private void OpenInfo()
+    public void OpenInfo()
     {
         isOpened = !isOpened;
 
@@ -37,6 +39,10 @@ public class BattleInfoUI : MonoBehaviour
                 info.PopulatePanel();
 
             tabs.JumpToPage(1);
+        }
+        else
+        {
+            attackButton.Select();
         }
     }
 

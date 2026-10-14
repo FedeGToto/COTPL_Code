@@ -19,10 +19,6 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemDescription;
 
-    [Header("Stats")]
-    [SerializeField] private TextMeshProUGUI moneyText;
-    [SerializeField] private TextMeshProUGUI soulsText;
-
     [Header("Animation")]
     [SerializeField] private RectTransform shopRect;
     [SerializeField] private float openPos = -32f;
@@ -32,8 +28,6 @@ public class ShopUI : MonoBehaviour
     public void OpenShop()
     {
         GameManager.Instance.Input.ChangeContext(InputManager.InputContext.UserInterface);
-        moneyText.text = GameManager.Instance.Player.Money.ToString();
-        soulsText.text = GameManager.Instance.Player.Souls.ToString();
 
         var items = GetItems();
 

@@ -49,7 +49,7 @@ public class FamerAI : EnemyAI
     public void Pitchfork()
     {
         BattleSystem battleSystem = Owner.Unit.BattleSystem;
-        battleSystem.UI.TextBox.SetText(attackText.GetLocalizedString()).OnComplete(() =>
+        battleSystem.UI.TextBox.SetText(attackText.GetLocalizedString(), () =>
         {
             Owner.Unit.PhysAttack(battleSystem.PlayerUnit);
             var enemyTurn = battleSystem.FSM.currentState as EnemyTurnState;
@@ -60,7 +60,7 @@ public class FamerAI : EnemyAI
 
     public void Escape()
     {
-        Owner.Unit.BattleSystem.UI.TextBox.SetText(escapeText.GetLocalizedString()).OnComplete(() =>
+        Owner.Unit.BattleSystem.UI.TextBox.SetText(escapeText.GetLocalizedString(), () =>
         {
             Owner.Unit.BattleSystem.Escape(Owner.Unit, fleeChance);
         });

@@ -13,13 +13,26 @@ public class BattleUI : MonoBehaviour
     [field: SerializeField] public ActionTextUI TextBox;
     [field: SerializeField] public BottomUI Bottom { get; private set; }
     [field: SerializeField] public UnitUI PlayerUI { get; private set; }
-    [field: SerializeField] public UnitUI EnemyUI { get; private set; }
+    [SerializeField] private UnitUI enemyUI;
+    [SerializeField] private UnitUI bossUI;
+    
+    public UnitUI EnemyUI => isBoss ? bossUI : enemyUI;
 
-    public void StartBattle()
+    private bool isBoss;
+
+    public void StartBattle(bool isBoss = false)
     {
-        PlayerUI.Setup();
-        EnemyUI.Setup();
+        this.isBoss = isBoss;
 
+        PlayerUI.Setup();
+
+        if (isBoss)
+        {
+            bossUI.Setup();
+            bossUI.SetName();
+        }
+        else
+            enemyUI.Setup();
     }
 
     public string PickStarterText(string enemyName)

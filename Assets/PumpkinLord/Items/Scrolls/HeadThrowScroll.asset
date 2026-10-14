@@ -38,11 +38,27 @@ MonoBehaviour:
         rid: 3811780849964154966
   icon: {fileID: 21300000, guid: 143e432320e81904fa38df4c6afb7178, type: 3}
   effect:
-    rid: 1771278590368022834
+    rid: 8100677334353838398
   references:
     version: 2
     RefIds:
-    - rid: 1771278590368022834
+    - rid: 3811780849964154966
+      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+        m_TableEntryReference:
+          m_KeyId: 200502472704
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - rid: 8100677334353838398
+      type: {class: MagicItem, ns: , asm: Assembly-CSharp}
+      data:
+        Spell:
+          rid: 8100677334353838399
+    - rid: 8100677334353838399
       type: {class: HeadThrowMagic, ns: , asm: Assembly-CSharp}
       data:
         <SpellName>k__BackingField:
@@ -65,7 +81,8 @@ MonoBehaviour:
           m_LocalVariables:
           - name: item_needed
             variable:
-              rid: 1771278675162693725
+              rid: 8100677334353838401
+        <Target>k__BackingField: 2
         <Cost>k__BackingField: 100
         <CostIsPercentage>k__BackingField: 1
         magicText:
@@ -79,31 +96,21 @@ MonoBehaviour:
           m_LocalVariables:
           - name: player
             variable:
-              rid: 1771278675162693724
+              rid: 8100677334353838400
         itemNeeded: item_cons_pumpkin
+        tarotNeeded: tarot_hangedman
         attackMultiplier: 2
-    - rid: 1771278675162693724
+    - rid: 8100677334353838400
       type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
       data:
         m_Value: Dullahan
-    - rid: 1771278675162693725
+    - rid: 8100677334353838401
       type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
       data:
         m_TableReference:
           m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
         m_TableEntryReference:
           m_KeyId: 565256487235584
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - rid: 3811780849964154966
-      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
-      data:
-        m_TableReference:
-          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
-        m_TableEntryReference:
-          m_KeyId: 200502472704
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0

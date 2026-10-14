@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UnitUI : MonoBehaviour
 {
     [SerializeField] private Unit unit;
+    [SerializeField] private TextMeshProUGUI characterName;
 
     [Header("Bars")]
     [field: SerializeField] public ResourceBar HealthBar { get; private set; }
@@ -15,8 +17,19 @@ public class UnitUI : MonoBehaviour
 
     public void Setup()
     {
+        gameObject.SetActive(true);
+
         HealthBar.SetupBar(unit.Character.HealthPoints);
         ManaBar.SetupBar(unit.Character.ManaPoints);
+    }
+
+    public void SetName()
+    {
+        if (characterName)
+        {
+            characterName.gameObject.SetActive(true);
+            characterName.text = unit.UnitName;
+        }
     }
 
     public void AddStatusEffect(StatusEffect statusEffect)

@@ -11,16 +11,16 @@ public class StartBattleState : State<BattleSystem>
         owner.EnemyUnit.Character.SetupStats();
         owner.PlayerUnit.Character = GameManager.Instance.Player.Character;
 
-        owner.UI.StartBattle();
-        var textTween = owner.UI.TextBox.SetText(owner.UI.PickStarterText(owner.EnemyUnit.UnitName));
-
-        stateTimer = new Timer(textTween.Duration() + 3f);
-        stateTimer.OnTimerStop += () =>
+        owner.UI.StartBattle(owner.IsBoss);
+        owner.UI.TextBox.SetText(owner.UI.PickStarterText(owner.EnemyUnit.UnitName),() =>
         {
-            owner.FSM.ChangeState(new PlayerTurnState());
-        };
-
-        stateTimer.Start();
+            stateTimer = new Timer(3f);
+            stateTimer.OnTimerStop += () =>
+            {
+                owner.FSM.ChangeState(new PlayerTurnState());
+            };
+            stateTimer.Start();
+        });
     }
 
     public override void ExitState(BattleSystem owner)
@@ -30,6 +30,6 @@ public class StartBattleState : State<BattleSystem>
 
     public override void UpdateState(BattleSystem owner)
     {
-        stateTimer.Update();
+        stateTimer?.Update();
     }
 }

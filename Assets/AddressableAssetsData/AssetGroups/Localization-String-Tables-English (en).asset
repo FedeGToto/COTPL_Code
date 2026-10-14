@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b36f8e8908441543ab60b593341a9e9
+    m_Address: Tarots_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 93573355cf4357841bcf2c458d925c13
     m_Address: Magic_en
     m_ReadOnly: 1
@@ -41,6 +47,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 952a2b125b5e4c243a045673ab781b15
     m_Address: Enemies_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b88a9429e1624724493b51737f4d19b1
+    m_Address: Statuses_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

@@ -21,12 +21,13 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 27776839680
     m_Localized: "A sword made up of sharpened bones. It\u2019s very useful to chop
-      heads off the body of a person. ATK +1"
+      heads off the body of a person. <sprite=\"stats\" tint=1 name=attack> +1"
     m_Metadata:
       m_Items: []
   - m_Id: 61415157760
     m_Localized: "A sword with a blade made of a special demonic iron. With this,
-      necks are like butter. Money Back Guarantee. \nATK + 10"
+      necks are like butter. Money Back Guarantee. \n<sprite=\"stats\" tint=1 name=attack>
+      + 10"
     m_Metadata:
       m_Items: []
   - m_Id: 5169541120

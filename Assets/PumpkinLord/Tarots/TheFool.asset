@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f079ed692cc15c4d9a145efe7ed276b, type: 3}
+  m_Name: TheFool
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: tarot_fool
+  tarotName:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 10093654016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tarotDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 35326586880
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: value
+      variable:
+        rid: 8100677241321554000
+  icon: {fileID: 21300000, guid: 506caf2162e8dec4fa19b78451afea09, type: 3}
+  effect:
+    rid: 7264864321863942232
+  references:
+    version: 2
+    RefIds:
+    - rid: 7264864321863942232
+      type: {class: FoolEffect, ns: , asm: Assembly-CSharp}
+      data:
+        missChance:
+          Values:
+          - 0.15
+          - 0.2
+          - 0.25
+          - 0.3
+          - 0.35
+        demeritEffects:
+          rid: 7264864321863942233
+    - rid: 7264864321863942233
+      type: {class: StatBoostEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <Artwork>k__BackingField: {fileID: 21300000, guid: 6da08a5243b947c42860011ac1d63e1f, type: 3}
+        <StatusName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7760307613696
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7767433736192
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: value
+            variable:
+              rid: 7264864321863942234
+        target: 1
+        statID: miss_chance
+        Value: 0
+    - rid: 7264864321863942234
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 0
+    - rid: 8100677241321554000
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 20

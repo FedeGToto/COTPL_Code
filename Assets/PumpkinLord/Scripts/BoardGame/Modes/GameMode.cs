@@ -7,6 +7,6 @@ public abstract class GameMode
     public abstract void StartGame();
 
     // Battle Logic
-    public abstract void StartBattle(EnemySO enemy);
-    public abstract void StartBattle(string enemyId);
+    public abstract void StartBattle(EnemySO enemy, bool isBoss = false);
+    public abstract void StartBattle(string enemyId, bool isBoss = false);
 }

@@ -8,6 +8,7 @@ public class InkExternalFunctions
     {
         story.BindExternalFunction("MoveTo", (string boxId) => MoveTo(boxId));
         story.BindExternalFunction("StartBattle", (string enemyId) => StartBattle(enemyId));
+        story.BindExternalFunction("StartBoss", (string enemyId) => StartBattle(enemyId, true));
         story.BindExternalFunction("StartNextTurn", () => StartNextTurn());
     }
 
@@ -35,9 +36,9 @@ public class InkExternalFunctions
             (GameManager.Instance.GameMode as BoardGameMode).GetNextBoxOfType(box);
     }
 
-    public void StartBattle(string enemyId)
+    public void StartBattle(string enemyId, bool isBoss = false)
     {
-        GameManager.Instance.GameMode.StartBattle(enemyId);
+        GameManager.Instance.GameMode.StartBattle(enemyId, isBoss);
     }
 
     public void StartNextTurn()

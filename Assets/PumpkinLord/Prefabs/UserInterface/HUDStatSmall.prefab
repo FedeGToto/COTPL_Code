@@ -32,6 +32,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1309011332710046288, guid: b388709333bbf0649a2dbcb214496707, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+    - target: {fileID: 1309011332710046288, guid: b388709333bbf0649a2dbcb214496707, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+    - target: {fileID: 1309011332710046288, guid: b388709333bbf0649a2dbcb214496707, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1770234334818069265, guid: b388709333bbf0649a2dbcb214496707, type: 3}
       propertyPath: m_Name
       value: HUDStatSmall

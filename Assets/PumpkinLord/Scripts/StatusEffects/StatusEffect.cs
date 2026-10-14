@@ -15,7 +15,15 @@ public abstract class StatusEffect
         this.unit = unit;
     }
 
-    public abstract void OnRemove(Unit unit);
-    public abstract void OnTurnStart();
-    public abstract void OnTurnEnd();
+    public virtual void OnReAdd()
+    {
+
+    }
+
+    public virtual void OnRemove(Unit unit) { }
+
+    public virtual void OnBattleStart() { }
+    public virtual void OnBattleEnd() { }
+    public virtual void OnTurnStart() { }
+    public virtual void OnTurnEnd() { }
 }

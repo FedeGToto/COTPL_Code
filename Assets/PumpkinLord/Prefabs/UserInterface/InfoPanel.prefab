@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health Points: 999'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -266,8 +266,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health Points: 999'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -664,8 +664,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Attacks
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 0}
+  targetCamera: {fileID: 0}
   textParent: {fileID: 8722975829561230112}
   characterName: {fileID: 2260589304625250012}
   statTextes:
@@ -920,8 +921,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Doctor
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1107,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 423.5, y: -333.90167}
+  m_AnchoredPosition: {x: 423.5, y: -335.34665}
   m_SizeDelta: {x: 815, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5451838556321051833
@@ -1149,8 +1150,8 @@ MonoBehaviour:
     <b>Heal</b> - Doctor
     drinks a healing potion and restores Health Points.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1300,8 +1301,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health Points: 999'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1716,8 +1717,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Effect Status
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2172,8 +2173,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health Points: 999'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -41,7 +41,7 @@ public class TagsManager : MonoBehaviour
     {
         foreach (TagSO tag in tags)
         {
-            if (tag.name == tagId)
+            if (tag.Name == tagId.ToLower())
                 return true;
         }
 

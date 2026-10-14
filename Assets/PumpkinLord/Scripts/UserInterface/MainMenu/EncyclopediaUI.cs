@@ -60,9 +60,9 @@ public class EncyclopediaUI : MonoBehaviour, IMenuPage
             case MagicItem:
                 MagicItem magicItem = item.Effect as MagicItem;
                 itemDescription2Text.text = $"<style=title>Magic</style>" +
-                    $"\r\n<b>{magicItem.SpellName.GetLocalizedString()}</b>" +
-                    $"\r\nCost: {magicItem.Cost}{(magicItem.CostIsPercentage ? "%" : "")} MP" +
-                    $"\r\n{magicItem.SpellDescription.GetLocalizedString()}";
+                    $"\r\n<b>{magicItem.Spell.SpellName.GetLocalizedString()}</b>" +
+                    $"\r\nCost: {magicItem.Spell.Cost}{(magicItem.Spell.CostIsPercentage ? "%" : "")} MP" +
+                    $"\r\n{magicItem.Spell.SpellDescription.GetLocalizedString()}";
                 break;
         }
     }

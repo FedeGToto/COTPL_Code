@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,7 @@ public class TabMenu : MonoBehaviour
     [SerializeField] private ToggleGroup toggleGroup;
     [SerializeField] private List<Toggle> tabs = new();
     [SerializeField] private List<CanvasGroup> pages = new();
+    [SerializeField] private List<Scrollbar> scrollBars = new();
 
     [Header("Events")]
     public UnityEvent<int> OnPageIndexChanged;
@@ -22,9 +24,11 @@ public class TabMenu : MonoBehaviour
 
         tabs.Clear();
         pages.Clear();
+        scrollBars.Clear();
 
         tabs.AddRange(GetComponentsInChildren<Toggle>());
         pages.AddRange(GetComponentsInChildren<CanvasGroup>());
+        scrollBars.AddRange(GetComponentsInChildren<Scrollbar>());
     }
 
     private void Reset()
@@ -56,6 +60,28 @@ public class TabMenu : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        GameManager.Instance.Input.OnChangePage += OnChangePageInput;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.Input.OnChangePage -= OnChangePageInput;
+    }
+
+    private void OnChangePageInput(bool advance)
+    {
+        int index = pageIndex;
+
+        Debug.Log(advance);
+
+        if (advance) index++; 
+        else index--;
+
+        JumpToPage(index);
+    }
+
     private void CheckForTab(bool value)
     {
         for (int i = 0; i < tabs.Count; i++)
@@ -79,6 +105,8 @@ public class TabMenu : MonoBehaviour
             pages[i].interactable = isActivePage;
             pages[i].blocksRaycasts = isActivePage;
             tabs[i].SetIsOnWithoutNotify(isActivePage);
+
+            if (isActivePage) scrollBars[i].Select();
         }
 
         if (Application.isPlaying)
@@ -87,7 +115,7 @@ public class TabMenu : MonoBehaviour
 
     private void EnsureIndexIsInRange(int index)
     {
-        if (tabs.Count == 0 || pages.Count == 0)
+        if (tabs.Count == 0 || pages.Count == 0 || scrollBars.Count == 0)
         {
             Debug.Log("Forgot to setupè Tabs or Pages");
             return;

@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -258,9 +258,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8666231843013041401}
   - component: {fileID: 6597474616212340084}
-  - component: {fileID: 4357331090729076136}
   - component: {fileID: 6597593343755739048}
   - component: {fileID: 3873231240020011295}
+  - component: {fileID: 2546078515950515504}
   m_Layer: 0
   m_Name: ChoiceTemplate
   m_TagString: Untagged
@@ -297,36 +297,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826684072079879356}
   m_CullTransparentMesh: 1
---- !u!114 &4357331090729076136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826684072079879356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c83a18d8b40b5ac47924354d07fe2271, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.5
 --- !u!114 &6597593343755739048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +367,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6597593343755739048}
   choiceText: {fileID: 2528710576636839181}
+--- !u!114 &2546078515950515504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826684072079879356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c83a18d8b40b5ac47924354d07fe2271, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2.5
+  _source: {fileID: 0}
+  _textureAlphaMode: 0
+  _foregroundOpacity: 0.75
+  _vibrancy: 1
+  _brightness: -1
+  _flatten: 0
+  paraformConfig:
+    isCornersLinked: 0
+    cornerRadii: {x: 64, y: 64, z: 64, w: 64}
+    cornerCurvature: 1.5
+    filletCurvature: 2.5
+    bevelWidth: 64
+    ringThickness: 0
+    elevation: 100
+  _imageMode: 0
+  _rawTexture: {fileID: 0}
+  _uvRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &3592494416028223393
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8691887136483721807}
   - component: {fileID: 3154327210892858975}
-  - component: {fileID: 5209947240743216149}
+  - component: {fileID: 1370005171753120534}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -520,7 +542,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4085827743144854784}
   m_CullTransparentMesh: 1
---- !u!114 &5209947240743216149
+--- !u!114 &1370005171753120534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,11 +551,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4085827743144854784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 196bb08d6c2d3c9499c04e1281fd4ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -550,6 +572,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+  _source: {fileID: 0}
+  _textureAlphaMode: 0
+  _foregroundOpacity: 0.9
+  _vibrancy: 1
+  _brightness: -1
+  _flatten: 0
+  paraformConfig:
+    isCornersLinked: 0
+    cornerRadii: {x: 64, y: 64, z: 64, w: 64}
+    cornerCurvature: 1.5
+    filletCurvature: 2.5
+    bevelWidth: 64
+    ringThickness: 0
+    elevation: 100
+  _imageMode: 0
+  _rawTexture: {fileID: 0}
+  _uvRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &4752588743763153955
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,8 +805,8 @@ MonoBehaviour:
   m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
     tincidunt magna. Integer venenatis purus sem, at vestibulum velit ultrices in.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -898,8 +942,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TizioCaioSempronio
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
+  m_sharedMaterial: {fileID: -1127964208847245783, guid: 1964932418aa5e240ae6689f7c4c091f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1175,7 +1219,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 31
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

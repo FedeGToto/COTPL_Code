@@ -1,37 +1,29 @@
-using System;
-using UnityEngine;
+using StatSystem;
 
-public class PumpkinHeadItem : ConsumableItem
+public class PumpkinHeadItem : ConsumableItem, IDeathSaver
 {
+    public int Priority => 10;
+
     public override void BattleStart()
     {
         base.BattleStart();
-        BattleSystem.Instance.PlayerUnit.OnTakeDamage.AddListener(OnDamageTaken);
+        BattleSystem.Instance.PlayerUnit.RegisterDeathSave(this);
     }
 
     public override void BattleEnded()
     {
         base.BattleEnded();
-        BattleSystem.Instance.PlayerUnit.OnTakeDamage.RemoveListener(OnDamageTaken);
+        BattleSystem.Instance.PlayerUnit.UnregisterDeathSave(this);
     }
 
-    private void OnDamageTaken()
+    public bool TrySave(Resource health)
     {
-        if (BattleSystem.Instance.PlayerUnit.Character.HealthPoints.Value <= 0)
-        {
-            Use();
-        }
-    }
+        float healValue = health.MaxValue;
+        health.Value = healValue;
 
-    public override void Use()
-    {
-        var player = GameManager.Instance.Player;
+        // effect
 
-        float healValue = player.Character.HealthPoints.MaxValue;
-        player.Character.HealthPoints.Value = healValue;
-
-        // Use effect
-
-        base.Use();
+        Use();
+        return true;
     }
 }

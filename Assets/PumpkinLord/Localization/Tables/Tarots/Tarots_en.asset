@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Tarots_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: db46ae9adda7f1546abd06c2cbfa4315, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 7264864321863942226
+  m_TableData:
+  - m_Id: 35326586880
+    m_Localized: 'Gain 1 <color=yellow>revive</color>. The next time Dullahan dies,
+      consume 1 <color=yellow>revive</color> and revive them with 50% Max HP.
+
+
+      There
+      is a {value}% your attack misses.'
+    m_Metadata:
+      m_Items:
+      - rid: 7264864321863942226
+  - m_Id: 10093654016
+    m_Localized: 0. The Fool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 555101515776
+    m_Localized: I. The Magician
+    m_Metadata:
+      m_Items: []
+  - m_Id: 593357762560
+    m_Localized: 'Your spells are <color=green>{meritValue}%</color> more effective.
+
+
+      Your
+      spells costs <color=red>{demeritValue}%</color> more MP.'
+    m_Metadata:
+      m_Items:
+      - rid: 7264864321863942226
+  - m_Id: 781317107712
+    m_Localized: II. The High Priestess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 848828624896
+    m_Localized: 'You have a {meritValue}% to dodge an enemy attack.
+
+
+      Each
+      turn you gain {demeritValue} <color=yellow>Insanity</color> stacks.'
+    m_Metadata:
+      m_Items:
+      - rid: 7264864321863942226
+  - m_Id: 1067788070912
+    m_Localized: XII. The Hanged Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1113094942720
+    m_Localized: 'Gain 1 stack of <color=yellow>Hanged</color>. The next time you
+      use <color=red>Head Throw</color>, consume a stack of <color=yellow>Hanged</color>.
+      Current stacks: {value}
+
+
+      You''re unable to use <color=red>Head Throw</color>
+      without <color=yellow>Hanged</color> stacks.'
+    m_Metadata:
+      m_Items:
+      - rid: 7264864321863942226
+  - m_Id: 1459917746176
+    m_Localized: XXI. The World
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1492163555328
+    m_Localized: 'When you have at least 15 Souls, your ATTACK deals <color=green>{meritValue}%</color>
+      more damage.
+
+
+      Until you have at least 10 Souls, your ATTACK deals <color=red>{demeritValue}%</color>
+      less damage.'
+    m_Metadata:
+      m_Items:
+      - rid: 7264864321863942226
+  references:
+    version: 2
+    RefIds:
+    - rid: 7264864321863942226
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1113094942720
+        - id: 35326586880
+        - id: 1492163555328
+        - id: 593357762560
+        - id: 848828624896

@@ -36,9 +36,19 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9205b243fad61954dbeacb44ccac43e4
+    m_Address: Assets/PumpkinLord/Localization/Tables/Statuses/Statuses Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa9921d1569ecc64f851e4bfd64ec759
     m_Address: Assets/PumpkinLord/Localization/Tables/Characters/Characters Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db46ae9adda7f1546abd06c2cbfa4315
+    m_Address: Assets/PumpkinLord/Localization/Tables/Tarots/Tarots Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

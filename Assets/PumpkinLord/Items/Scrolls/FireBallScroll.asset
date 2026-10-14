@@ -35,14 +35,19 @@ MonoBehaviour:
     m_LocalVariables:
     - name: magic
       variable:
-        rid: 3811780849964154968
+        rid: 8100677334353838390
   icon: {fileID: 21300000, guid: e51470460b8ea254b9f7b0c2921660a4, type: 3}
   effect:
-    rid: 1771278590368022833
+    rid: 8100677334353838386
   references:
     version: 2
     RefIds:
-    - rid: 1771278590368022833
+    - rid: 8100677334353838386
+      type: {class: MagicItem, ns: , asm: Assembly-CSharp}
+      data:
+        Spell:
+          rid: 8100677334353838387
+    - rid: 8100677334353838387
       type: {class: FireBallMagic, ns: , asm: Assembly-CSharp}
       data:
         <SpellName>k__BackingField:
@@ -62,8 +67,12 @@ MonoBehaviour:
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0
-          m_LocalVariables: []
-        <Cost>k__BackingField: 40
+          m_LocalVariables:
+          - name: caster
+            variable:
+              rid: 8100677364910391388
+        <Target>k__BackingField: 2
+        <Cost>k__BackingField: 7
         <CostIsPercentage>k__BackingField: 0
         magicText:
           m_TableReference:
@@ -76,21 +85,25 @@ MonoBehaviour:
           m_LocalVariables:
           - name: player
             variable:
-              rid: 1771278675162693722
+              rid: 8100677334353838388
         attackMultiplier: 1
         defenseMultiplier: 1
-    - rid: 1771278675162693722
+    - rid: 8100677334353838388
       type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
       data:
         m_Value: Dullahan
-    - rid: 3811780849964154968
+    - rid: 8100677334353838390
       type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
       data:
         m_TableReference:
-          m_TableCollectionName: GUID:81f5288c674580e4893858d00d79775c
+          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
         m_TableEntryReference:
-          m_KeyId: 564956678385664
+          m_KeyId: 68696469504
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
+    - rid: 8100677364910391388
+      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: Dullahan

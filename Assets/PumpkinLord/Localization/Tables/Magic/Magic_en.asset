@@ -24,30 +24,34 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27495821312
-    m_Localized: Heals Dullahan 25% of their max HP.
+    m_Localized: Heals {caster} {value} of their max HP.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 1771278675162693719
   - m_Id: 68696469504
     m_Localized: Fire Ball
     m_Metadata:
       m_Items: []
   - m_Id: 105405018112
-    m_Localized: Dullahan casts a fire ball that deals POW damages.
+    m_Localized: '{caster} casts a fire ball that deals <color=purple><sprite="stats"
+      tint=1 name=power>magical damage</color>.'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 1771278675162693719
   - m_Id: 200502472704
     m_Localized: Head Throw
     m_Metadata:
       m_Items: []
   - m_Id: 246048419840
     m_Localized: "Dullahan throws their head to the enemy, killing them if they aren't
-      a boss, otherwise, they\u2019ll deal POWx2 damages. If Dullahan has a [{item_needed}]
-      in their Inventory, the cost of this spell is the item instead."
+      a boss, otherwise, they\u2019ll deal 2x <color=purple><sprite=\"stats\" tint=1
+      name=power>magical damages</color>. If Dullahan has a [{item_needed}] in their
+      Inventory, the cost of this spell is the item instead."
     m_Metadata:
       m_Items:
       - rid: 1771278675162693719
   - m_Id: 1179779602640896
-    m_Localized: '{player} casts an heal magic on themself.'
+    m_Localized: '{player} casts an heal magic.'
     m_Metadata:
       m_Items:
       - rid: 1771278675162693719
@@ -72,7 +76,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10971259368173568
     m_Localized: Dullahan sets their sword aflame and slashes the enemy, dealing
-      POW damage and <color=red>burning</color> the enemy for 3 turns.
+      <color=purple><sprite="stats" tint=1 name=power>magical damage</color> and
+      <color=red>burning</color> the enemy for 3 turns.
     m_Metadata:
       m_Items: []
   references:
@@ -88,3 +93,5 @@ MonoBehaviour:
         - id: 1191248067096576
         - id: 246048419840
         - id: 10971269811990528
+        - id: 27495821312
+        - id: 105405018112

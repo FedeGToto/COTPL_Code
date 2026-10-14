@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tarots Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tarots
+  m_TableCollectionNameGuidString: db46ae9adda7f1546abd06c2cbfa4315
+  m_Entries:
+  - m_Id: 10093654016
+    m_Key: tarot_fool.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35326586880
+    m_Key: tarot_fool.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 555101515776
+    m_Key: tarot_magician.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 593357762560
+    m_Key: tarot_magician.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781317107712
+    m_Key: tarot_highPriestess.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 848828624896
+    m_Key: tarot_highPriestess.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1067788070912
+    m_Key: tarot_hangedMan.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1113094942720
+    m_Key: tarot_hangedMan.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459917746176
+    m_Key: tarot_world.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1492163555328
+    m_Key: tarot_world.description
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7264864321863942225
+  references:
+    version: 2
+    RefIds:
+    - rid: 7264864321863942225
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790717441600

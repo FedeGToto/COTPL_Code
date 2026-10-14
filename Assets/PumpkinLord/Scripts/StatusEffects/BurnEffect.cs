@@ -14,11 +14,6 @@ public class BurnEffect : StatusEffect
         currentDuration = duration;
     }
 
-    public override void OnRemove(Unit unit)
-    {
-        
-    }
-
     public override void OnTurnEnd()
     {
         currentDuration--;
@@ -31,6 +26,14 @@ public class BurnEffect : StatusEffect
 
     public override void OnTurnStart()
     {
-        unit.TakeDamage(unit, damagePerTurn);
+        DamageInfo info = new()
+        {
+            Target = unit,
+            Source = unit,
+            DamageType = DamageType.Magical,
+            BaseDamage = damagePerTurn
+        };
+
+        unit.TakeDamage(info);
     }
 }

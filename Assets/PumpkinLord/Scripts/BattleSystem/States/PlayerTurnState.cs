@@ -1,39 +1,41 @@
 using System;
 using UnityEngine;
 
-public class PlayerTurnState : State<BattleSystem>
+public class PlayerTurnState : UnitTurnState
 {
-    private Timer nextTurnTimer;
-    private BattleSystem owner;
-
     public override void EnterState(BattleSystem owner)
     {
-        this.owner = owner;
+        base.EnterState(owner);
 
         owner.UI.Bottom.SetOn();
 
         owner.PlayerUnit.Status.CheckStartTurn();
+        
+        if (TarotsManager.Instance != null)
+        {
+            TarotsManager.Instance.CheckStartTurn();
+        }
     }
 
     public override void ExitState(BattleSystem owner)
     {
         owner.PlayerUnit.Status.CheckEndTurn();
 
+        if (TarotsManager.Instance != null)
+        {
+            TarotsManager.Instance.CheckEndTurn();
+        }
+
         owner.UI.Bottom.SetOff();
     }
 
-    public override void UpdateState(BattleSystem owner)
+    public override void EndTurn(float endTurnDuration)
     {
-        nextTurnTimer?.Update();
-    }
+        base.EndTurn(endTurnDuration);
 
-    public void EndTurn(float endTurnDuration)
-    {
-        nextTurnTimer = new Timer(endTurnDuration);
-        nextTurnTimer.Start();
-        nextTurnTimer.OnTimerStop += () =>
+        NextTurnTimer.OnTimerStop += () =>
         {
-            owner.FSM.ChangeState(new EnemyTurnState());
+            Owner.FSM.ChangeState(new EnemyTurnState());
         };
     }
 }

@@ -15,11 +15,6 @@ public class PoisonEffect : StatusEffect
         currentDuration = duration;
     }
 
-    public override void OnRemove(Unit unit)
-    {
-
-    }
-
     public override void OnTurnEnd()
     {
         currentDuration--;
@@ -32,7 +27,14 @@ public class PoisonEffect : StatusEffect
 
     public override void OnTurnStart()
     {
-        unit.TakeDamage(unit, healthPointDOT);
+        DamageInfo info = new()
+        {
+            Target = unit,
+            Source = unit,
+            DamageType = DamageType.Magical,
+            BaseDamage = healthPointDOT
+        };
+        unit.TakeDamage(info);
         unit.Character.ManaPoints.Value -= manaPointDOT;
     }
 }

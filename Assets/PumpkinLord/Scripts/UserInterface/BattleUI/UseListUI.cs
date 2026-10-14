@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,10 +7,27 @@ using UnityEngine.UI;
 public class UseListUI : MonoBehaviour
 {
     [SerializeField] private UsableUI buttonTemplate;
+    [SerializeField] private PlayerActionsUI actionsUI;
     [SerializeField] private Transform buttonParent;
 
     [Header("Description")]
     [SerializeField] private TextMeshProUGUI descriptionText;
+
+    private void OnEnable()
+    {
+        GameManager.Instance.Input.OnUICancel += UICancel;
+    }
+
+    private void UICancel()
+    {
+        actionsUI.EnableButtons();
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.Input.OnUICancel -= UICancel;
+    }
 
     public void OpenList(List<ItemSO> items)
     {

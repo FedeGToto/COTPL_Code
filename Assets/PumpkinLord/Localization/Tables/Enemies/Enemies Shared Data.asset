@@ -15,88 +15,144 @@ MonoBehaviour:
   m_TableCollectionName: Enemies
   m_TableCollectionNameGuidString: 0183662eed9f98f4eb3d631ad6a46b23
   m_Entries:
-  - m_Id: 131434868736
-    m_Key: farmer_attack
+  - m_Id: 70752427567017984
+    m_Key: katrina_zone_desc
     m_Metadata:
       m_Items: []
-  - m_Id: 301815885824
-    m_Key: farmer_attack_desc
+  - m_Id: 70752381236736000
+    m_Key: katrina_zone
     m_Metadata:
       m_Items: []
-  - m_Id: 384217182208
-    m_Key: farmer_attack_text
+  - m_Id: 70750921295982592
+    m_Key: katrina_manarestore_text
     m_Metadata:
       m_Items: []
-  - m_Id: 548306743296
-    m_Key: farmer_escape
+  - m_Id: 70750910311100416
+    m_Key: katrina_manarestore_desc
     m_Metadata:
       m_Items: []
-  - m_Id: 551834152960
-    m_Key: farmer_escape_desc
+  - m_Id: 70750879013203968
+    m_Key: katrina_manarestore
     m_Metadata:
       m_Items: []
-  - m_Id: 561564938240
-    m_Key: farmer_escape_text
+  - m_Id: 70323151168401408
+    m_Key: katrina_booktoss_text
     m_Metadata:
       m_Items: []
-  - m_Id: 2214456258560
-    m_Key: doctor_scalpel
+  - m_Id: 70323131031547904
+    m_Key: katrina_booktoss_desc
     m_Metadata:
       m_Items: []
-  - m_Id: 2218927386624
-    m_Key: doctor_scalpel_desc
+  - m_Id: 70322950689058816
+    m_Key: katrina_booktoss
     m_Metadata:
       m_Items: []
-  - m_Id: 2228649783296
-    m_Key: doctor_scalpel_text
+  - m_Id: 71045364486041600
+    m_Key: katrina_blessing_text
     m_Metadata:
       m_Items: []
-  - m_Id: 2369855221760
-    m_Key: doctor_poison
+  - m_Id: 71045352985260032
+    m_Key: katrina_blessing_desc
     m_Metadata:
       m_Items: []
-  - m_Id: 2374296989696
-    m_Key: doctor_poison_desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2384166187008
-    m_Key: doctor_poison_text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2479620157440
-    m_Key: doctor_heal
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2484930146304
-    m_Key: doctor_heal_desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2498221895680
-    m_Key: doctor_heal_text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1071911457058816
-    m_Key: ichabod_slash
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1071945745494016
-    m_Key: ichabod_slash_desc
+  - m_Id: 71045311050608640
+    m_Key: katrina_blessing
     m_Metadata:
       m_Items: []
   - m_Id: 1071960924680192
     m_Key: ichabod_slash_text
     m_Metadata:
       m_Items: []
-  - m_Id: 2466072995360768
-    m_Key: ichabod_lunge
+  - m_Id: 1071945745494016
+    m_Key: ichabod_slash_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1071911457058816
+    m_Key: ichabod_slash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2466120634265600
+    m_Key: ichabod_lunge_text
     m_Metadata:
       m_Items: []
   - m_Id: 2466110978977792
     m_Key: ichabod_lunge_desc
     m_Metadata:
       m_Items: []
-  - m_Id: 2466120634265600
-    m_Key: ichabod_lunge_text
+  - m_Id: 2466072995360768
+    m_Key: ichabod_lunge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 561564938240
+    m_Key: farmer_escape_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 551834152960
+    m_Key: farmer_escape_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 548306743296
+    m_Key: farmer_escape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384217182208
+    m_Key: farmer_attack_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301815885824
+    m_Key: farmer_attack_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131434868736
+    m_Key: farmer_attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2228649783296
+    m_Key: doctor_scalpel_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2218927386624
+    m_Key: doctor_scalpel_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2214456258560
+    m_Key: doctor_scalpel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2384166187008
+    m_Key: doctor_poison_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2374296989696
+    m_Key: doctor_poison_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2369855221760
+    m_Key: doctor_poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2498221895680
+    m_Key: doctor_heal_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2484930146304
+    m_Key: doctor_heal_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2479620157440
+    m_Key: doctor_heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71048356463439872
+    m_Key: katrina_reading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71048406748950528
+    m_Key: katrina_reading_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71048417868050432
+    m_Key: katrina_reading_text
     m_Metadata:
       m_Items: []
   m_Metadata:

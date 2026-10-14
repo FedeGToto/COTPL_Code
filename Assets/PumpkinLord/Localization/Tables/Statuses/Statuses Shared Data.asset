@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Statuses Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Statuses
+  m_TableCollectionNameGuidString: 9205b243fad61954dbeacb44ccac43e4
+  m_Entries:
+  - m_Id: 7430765342720
+    m_Key: world
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7478421024768
+    m_Key: world.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7488600600576
+    m_Key: world2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7504648007680
+    m_Key: world2.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7760307613696
+    m_Key: fool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7767433736192
+    m_Key: fool.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7921591185408
+    m_Key: stagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7926825676800
+    m_Key: stagger.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7937416294400
+    m_Key: stagger.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8171798196224
+    m_Key: burn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8178026737664
+    m_Key: burn.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8191939244032
+    m_Key: poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311262998528
+    m_Key: poison.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121620842737664
+    m_Key: magician
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121714409271296
+    m_Key: magician.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143547795828736
+    m_Key: magician2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143592754573312
+    m_Key: mana_up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143609221410816
+    m_Key: mana_up.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754265154973696
+    m_Key: insanity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754281466621952
+    m_Key: insanity.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2526482108837888
+    m_Key: dodge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2526498223353856
+    m_Key: dodge.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2948603331014656
+    m_Key: hastur_blessing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2948622817751040
+    m_Key: hastur_blessing.desc
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8100677334353838369
+  references:
+    version: 2
+    RefIds:
+    - rid: 8100677334353838369
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1791303294826

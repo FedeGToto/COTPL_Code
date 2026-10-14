@@ -23,6 +23,11 @@ public class PumpkinMode : BoardGameMode
     private int[] diceThrows;
     private bool diceLaunched;
 
+    [Header("Tarots")]
+    [SerializeField] private TarotsManager tarotsManager;
+    [SerializeField] private int tarotTriggerBoardID = 0;
+    private bool shouldDrawTarot = false;
+
     [SerializeField] private GameObject moveVolume;
     [SerializeField] private GameObject diceCamera;
 
@@ -35,6 +40,7 @@ public class PumpkinMode : BoardGameMode
     {
         GameManager.Instance.Input.OnDiceThrow += ThrowDices;
         EventManager.Instance.AddListener<BattleEndedEvent>(OnBattleEnd);
+        EventManager.Instance.AddListener<PickedTarotEvent>(OnTarotDrawn);
 
         var bonFireBoxes = boxes.Where((n, i) => (bonFireIDs.Contains(i))).ToList();
         bonFireBoxes.ForEach(o => o.Initialize(bonfireBox));
@@ -63,8 +69,14 @@ public class PumpkinMode : BoardGameMode
         StartNextTurn();
     }
 
+    private void OnTarotDrawn(PickedTarotEvent e)
+    {
+        CanThrowDice = true;
+    }
+
     private void OnBattleEnd(BattleEndedEvent e)
     {
+        tarotsManager.EndCombat();
         StartNextTurn();
     }
 
@@ -72,7 +84,13 @@ public class PumpkinMode : BoardGameMode
     {
         turns++;
 
-        CanThrowDice = true;
+        if (shouldDrawTarot)
+        {
+            tarotsManager.DrawTarot();
+            shouldDrawTarot = false;
+        }
+        else
+            CanThrowDice = true;
     }
 
     public override void MovePlayerToNextPosition()
@@ -81,8 +99,12 @@ public class PumpkinMode : BoardGameMode
         {
             boxesToMove--;
             EventManager.Instance.TriggerEvent(new MoveEvent { RemainingBoxes = boxesToMove });
+
             playerPosition++;
             playerPawn.MoveTo(GetBox().LandingPoint);
+
+            if (playerPosition == tarotTriggerBoardID)
+                shouldDrawTarot = true;
         }
         else
         {
@@ -188,7 +210,7 @@ public class PumpkinMode : BoardGameMode
         MovePlayerToNextPosition();
     }
 
-    public override void StartBattle(EnemySO enemy)
+    public override void StartBattle(EnemySO enemy, bool isBoss = false)
     {
         EventManager.Instance.TriggerEvent(new StartBattleEvent() { Enemy = enemy });
 
@@ -203,18 +225,19 @@ public class PumpkinMode : BoardGameMode
             },
             () =>
             {
-                BattleSystem.Instance.StartBattle(enemy);
+                BattleSystem.Instance.StartBattle(enemy, isBoss);
+                tarotsManager.StartCombat();
             }
         );
     }
 
-    public override void StartBattle(string enemyId)
+    public override void StartBattle(string enemyId, bool isBoss = false)
     {
         foreach (EnemySO enemy in enemies)
         {
             if (enemy.name == enemyId)
             {
-                StartBattle(enemy);
+                StartBattle(enemy, isBoss);
                 return;
             }
         }

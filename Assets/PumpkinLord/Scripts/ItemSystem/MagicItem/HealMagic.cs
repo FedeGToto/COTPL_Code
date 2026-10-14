@@ -1,31 +1,44 @@
 using DG.Tweening;
+using Rewired;
 using UnityEngine;
 using UnityEngine.Localization;
 
 [System.Serializable]
-public class HealMagic : MagicItem
+public class HealMagic : Spell
 {
     [SerializeField] private bool isPercentage;
     [SerializeField] private float healValue;
 
-    public override void Use()
+    public override void Use(Unit caster)
     {
-        Unit player = BattleSystem.Instance.PlayerUnit;
-        float value = healValue;
+        UseCost(caster);
 
-        if (isPercentage)
+        BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString(), () =>
         {
-            value = player.Character.HealthPoints.Value * healValue;
-        }
+            foreach (var target in GetTargets())
+            {
+                float value = healValue;
 
-        player.Character.ManaPoints.Value -= Cost;
+                if (isPercentage)
+                {
+                    value = target.Character.HealthPoints.Value * healValue;
+                }
 
-        BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString()).OnComplete(() =>
-        {
-            player.Heal(value);
+                target.Heal(value * Effectiveness);
+            }
 
-            var playerTurn = BattleSystem.Instance.FSM.currentState as PlayerTurnState;
-            playerTurn.EndTurn(1.5f);
+            var turn = BattleSystem.Instance.FSM.currentState as UnitTurnState;
+            turn.EndTurn(1.5f);
         });
+    }
+
+    public override bool CostCheck(Unit caster)
+    {
+        return ManaCheck(caster);
+    }
+
+    public override void UseCost(Unit caster)
+    {
+        ManaUse(caster);
     }
 }

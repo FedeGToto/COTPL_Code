@@ -203,22 +203,6 @@ MonoBehaviour:
     m_Key: cancel
     m_Metadata:
       m_Items: []
-  - m_Id: 17313308287758336
-    m_Key: status_burn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17313360771084288
-    m_Key: status_poison
-    m_Metadata:
-      m_Items: []
-  - m_Id: 63657728255520768
-    m_Key: status_poison_desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 63657756210556928
-    m_Key: status_burn_desc
-    m_Metadata:
-      m_Items: []
   - m_Id: 64057128463167488
     m_Key: stats_value
     m_Metadata:
@@ -227,16 +211,8 @@ MonoBehaviour:
     m_Key: attack_description
     m_Metadata:
       m_Items: []
-  - m_Id: 65140046900031488
-    m_Key: status_stagger
-    m_Metadata:
-      m_Items: []
-  - m_Id: 65140133143310336
-    m_Key: status_stagger_desc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 65140214496030720
-    m_Key: status_stagger_text_player
+  - m_Id: 132135343387373568
+    m_Key: tarots
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -47,12 +47,12 @@ public class PlayerActionsUI : MonoBehaviour
     {
         DisableButton();
         LocalizedString selectedAttackString = attackString[Random.Range(0, attackString.Length)];
-        battle.UI.TextBox.SetText(selectedAttackString.GetLocalizedString()).OnComplete(() =>
+        battle.UI.TextBox.SetText(selectedAttackString.GetLocalizedString(), () =>
         {
             float enemyHealth = battle.EnemyUnit.Character.HealthPoints.Value;
             if (enemyHealth > 1)
             {
-                battle.PlayerUnit.PhysAttack(battle.EnemyUnit);
+                battle.PlayerUnit.PhysAttack(battle.EnemyUnit, type: AttackType.BaseAttack);
 
                 var playerTurn = battle.FSM.currentState as PlayerTurnState;
                 playerTurn.EndTurn(1.5f);
@@ -91,7 +91,7 @@ public class PlayerActionsUI : MonoBehaviour
     {
         DisableButton();
         LocalizedString selectedFleeString = fleeString[Random.Range(0, fleeString.Length)];
-        battle.UI.TextBox.SetText(selectedFleeString.GetLocalizedString()).OnComplete(() =>
+        battle.UI.TextBox.SetText(selectedFleeString.GetLocalizedString(), () =>
         {
             battle.Escape(battle.PlayerUnit, 0.6f);
         });

@@ -29,6 +29,11 @@ public class CloseShopEvent : GameEvent
 
 }
 
+public class PickedTarotEvent : GameEvent
+{
+    public TarotSO Tarot;
+}
+
 public class StartBattleEvent : GameEvent
 {
     public EnemySO Enemy;
@@ -37,6 +42,16 @@ public class StartBattleEvent : GameEvent
 public class BattleEndedEvent : GameEvent
 {
 
+}
+
+public class OpenZoneEvent : GameEvent
+{
+    public Zone Zone;
+}
+
+public class CloseZoneEvent : GameEvent
+{
+    public Zone Zone;
 }
 
 public class MoneyChangeEvent : GameEvent

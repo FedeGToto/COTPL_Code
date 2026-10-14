@@ -35,14 +35,30 @@ MonoBehaviour:
     m_LocalVariables:
     - name: magic
       variable:
-        rid: 3811780849964154965
+        rid: 8100677334353838393
   icon: {fileID: 21300000, guid: cccf50f1d8b47d14a894b4e7b0b6c99c, type: 3}
   effect:
-    rid: 3811780849964154962
+    rid: 8100677334353838394
   references:
     version: 2
     RefIds:
-    - rid: 3811780849964154962
+    - rid: 8100677334353838393
+      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
+      data:
+        m_TableReference:
+          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
+        m_TableEntryReference:
+          m_KeyId: 10971218989608960
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+    - rid: 8100677334353838394
+      type: {class: MagicItem, ns: , asm: Assembly-CSharp}
+      data:
+        Spell:
+          rid: 8100677334353838395
+    - rid: 8100677334353838395
       type: {class: FlameThrowerMagic, ns: , asm: Assembly-CSharp}
       data:
         <SpellName>k__BackingField:
@@ -63,6 +79,7 @@ MonoBehaviour:
           m_FallbackState: 0
           m_WaitForCompletion: 0
           m_LocalVariables: []
+        <Target>k__BackingField: 2
         <Cost>k__BackingField: 15
         <CostIsPercentage>k__BackingField: 0
         magicText:
@@ -76,47 +93,36 @@ MonoBehaviour:
           m_LocalVariables:
           - name: player
             variable:
-              rid: 3811780849964154974
+              rid: 8100677334353838396
         attackMultiplier: 1
         defenseMultiplier: 1
         burnEffect:
-          rid: 3811780849964154963
-    - rid: 3811780849964154963
+          rid: 8100677334353838397
+    - rid: 8100677334353838396
+      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: Dullahan
+    - rid: 8100677334353838397
       type: {class: BurnEffect, ns: , asm: Assembly-CSharp}
       data:
         <Artwork>k__BackingField: {fileID: 21300000, guid: 8b8964ef1f29e214eafc422e9b1e0c1f, type: 3}
         <StatusName>k__BackingField:
           m_TableReference:
-            m_TableCollectionName: GUID:edaf7c34811d3044aa160bc2d28b1bfc
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
           m_TableEntryReference:
-            m_KeyId: 17313308287758336
+            m_KeyId: 8171798196224
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0
           m_LocalVariables: []
         <StatusDescription>k__BackingField:
           m_TableReference:
-            m_TableCollectionName: GUID:edaf7c34811d3044aa160bc2d28b1bfc
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
           m_TableEntryReference:
-            m_KeyId: 63657756210556928
+            m_KeyId: 8178026737664
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0
           m_LocalVariables: []
         duration: 5
         damagePerTurn: 40
-    - rid: 3811780849964154965
-      type: {class: LocalizedString, ns: UnityEngine.Localization, asm: Unity.Localization}
-      data:
-        m_TableReference:
-          m_TableCollectionName: GUID:420f4e8343b1ace4ca10723e58710598
-        m_TableEntryReference:
-          m_KeyId: 10971218989608960
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-    - rid: 3811780849964154974
-      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
-      data:
-        m_Value: Dullahan

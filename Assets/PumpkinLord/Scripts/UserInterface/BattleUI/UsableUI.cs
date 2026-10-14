@@ -25,23 +25,16 @@ public class UsableUI : Button
             case MagicItem:
                 MagicItem magic = item.Effect as MagicItem;
                 // Set name
-                itemName.text = magic.SpellName.GetLocalizedString();
+                itemName.text = magic.Spell.SpellName.GetLocalizedString();
 
                 //Set quantity
-                quantityText.text = magic.Cost.ToString();
+                quantityText.text = magic.Spell.RealCost.ToString();
 
-                if (magic.CostIsPercentage)
+                if (magic.Spell.CostIsPercentage)
                     quantityText.text += "%";
 
                 // Set interactability
-                if (!magic.CostIsPercentage && BattleSystem.Instance.PlayerUnit.Character.ManaPoints.Value < magic.Cost)
-                {
-                    interactable = false;
-                }
-                else if (magic.CostIsPercentage && BattleSystem.Instance.PlayerUnit.Character.ManaPoints.Value <= 0)
-                {
-                    interactable = false;
-                }
+                interactable = magic.Spell.CostCheck(BattleSystem.Instance.PlayerUnit);
                 break;
             case ConsumableItem:
                 ConsumableItem cons = item.Effect as ConsumableItem;
@@ -83,7 +76,7 @@ public class UsableUI : Button
         {
             case MagicItem:
                 MagicItem magic = item.Effect as MagicItem;
-                description = magic.SpellDescription.GetLocalizedString();
+                description = magic.Spell.SpellDescription.GetLocalizedString();
                 break;
             case ConsumableItem:
                 description = item.Description;
@@ -104,11 +97,11 @@ public class UsableUI : Button
         {
             case MagicItem:
                 MagicItem magic = item.Effect as MagicItem;
-                magic.Use();
+                magic.Spell.Use(BattleSystem.Instance.PlayerUnit);
                 break;
             case ConsumableItem:
                 ConsumableItem consumable = item.Effect as ConsumableItem;
-                BattleSystem.Instance.UI.TextBox.SetText("Dullahan used an item.").OnComplete(() => // Change the text
+                BattleSystem.Instance.UI.TextBox.SetText("Dullahan used an item.", () => // Change the text
                 {
                     consumable.Use();
 

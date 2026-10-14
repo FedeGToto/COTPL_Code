@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f079ed692cc15c4d9a145efe7ed276b, type: 3}
+  m_Name: TheWorld
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: tarot_world
+  tarotName:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 1459917746176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tarotDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 1492163555328
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: meritValue
+      variable:
+        rid: 8100677334353838364
+    - name: demeritValue
+      variable:
+        rid: 8100677334353838365
+  icon: {fileID: 21300000, guid: b955ae4de6da26e429a7aed53217f789, type: 3}
+  effect:
+    rid: 8100677334353838366
+  references:
+    version: 2
+    RefIds:
+    - rid: 8100677334353838364
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 10
+    - rid: 8100677334353838365
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 50
+    - rid: 8100677334353838366
+      type: {class: WorldEffect, ns: , asm: Assembly-CSharp}
+      data:
+        meritThreshold: 15
+        meritEffect:
+          rid: 8100677334353838367
+        meritValues:
+          Values:
+          - 0.1
+          - 0.2
+          - 0.3
+          - 0.4
+          - 0.5
+        demeritThreshold: 10
+        demeritEffect:
+          rid: 8100677334353838368
+        demeritValues:
+          Values:
+          - -0.5
+          - -0.4
+          - -0.3
+          - -0.2
+          - -0.1
+    - rid: 8100677334353838367
+      type: {class: AttackBoostEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <Artwork>k__BackingField: {fileID: 21300000, guid: 0a55b65bb05bc564ab7ddbbbca877946, type: 3}
+        <StatusName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7430765342720
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7478421024768
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: value
+            variable:
+              rid: 8100677334353838379
+        BoostMultiplier: 0
+    - rid: 8100677334353838368
+      type: {class: AttackBoostEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <Artwork>k__BackingField: {fileID: 21300000, guid: 63b7cc13339fb7d44976310becb86699, type: 3}
+        <StatusName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7488600600576
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 7504648007680
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables:
+          - name: value
+            variable:
+              rid: 8100677334353838380
+        BoostMultiplier: 0
+    - rid: 8100677334353838379
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 0
+    - rid: 8100677334353838380
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 0

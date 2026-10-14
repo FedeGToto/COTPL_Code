@@ -36,9 +36,15 @@ public class Character : MonoBehaviour
         HealthPoints = new Resource(BaseStats.HealthPoints);
         ManaPoints = new Resource(BaseStats.ManaPoints);
 
+        // Exposed Stats
         Stats.Add("attack_phy", new(BaseStats.PhysicalAttack));
-        Stats.Add("attack_mag", new(BaseStats.PhysicalArmor));
-        Stats.Add("defense_phy", new(BaseStats.MagicAttack));
+        Stats.Add("attack_mag", new(BaseStats.MagicAttack));
+        Stats.Add("defense_phy", new(BaseStats.PhysicalArmor));
         Stats.Add("defense_mag", new(BaseStats.MagicArmor));
+
+        Stats.Add("miss_chance", new(0));
+        Stats.Add("dodge_chance", new(0));
+        Stats.Add("crit_chance", new(0));
+        Stats.Add("crit_power", new(0));
     }
 }

@@ -7,7 +7,7 @@ public class WinBattleState : State<BattleSystem>
     {
         GameManager.Instance.Player.Souls += owner.EnemyUnit.GetComponentInChildren<Enemy>().Souls;
         GameManager.Instance.Player.Money += owner.EnemyUnit.GetComponentInChildren<Enemy>().Money;
-        owner.UI.TextBox.SetText(owner.UI.WinText.GetLocalizedString()).OnComplete(() =>
+        owner.UI.TextBox.SetText(owner.UI.WinText.GetLocalizedString(), () =>
         {
             GameManager.Instance.UnloadAdditiveScene(() =>
             {

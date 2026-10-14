@@ -1,43 +1,77 @@
 using DG.Tweening;
 using Rewired;
+using StatSystem;
 using UnityEngine;
 
 [System.Serializable]
-public class HeadThrowMagic : MagicItem
+public class HeadThrowMagic : Spell
 {
     [SerializeField] private string itemNeeded;
+    [SerializeField] private string tarotNeeded;
     [SerializeField] private float attackMultiplier = 2f;
 
-    public override void Use()
+    public override void Use(Unit caster)
     {
-        Unit player = BattleSystem.Instance.PlayerUnit;
-        Unit enemy = BattleSystem.Instance.EnemyUnit;
+        UseCost(caster);
 
-        if (GameManager.Instance.Player.Inventory.HasItem(itemNeeded))
-        {
-            GameManager.Instance.Player.Inventory.RemoveItem(itemNeeded, 1);
-        }
-        else
-        {
-            float manaCost = player.Character.ManaPoints.Value * Cost;
-
-            player.Character.ManaPoints.Value -= manaCost;
-        }
-
-        BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString()).OnComplete(() =>
+        BattleSystem.Instance.UI.TextBox.SetText(magicText.GetLocalizedString(), () =>
         {
             // Check if is boss
-            if (BattleSystem.Instance.EnemyUnit.Tags.HasTag("Boss"))
+            if (BattleSystem.Instance.EnemyUnit.Tags.HasTag("boss"))
             {
-                player.MagicAttack(enemy, attackMultiplier);
+                foreach(var target in GetTargets())
+                    caster.MagicAttack(target, attackMultiplier * Effectiveness);
 
                 var playerTurn = BattleSystem.Instance.FSM.currentState as PlayerTurnState;
                 playerTurn.EndTurn(1.5f);
             }
             else
             {
-                enemy.Kill();
+                foreach (var target in GetTargets())
+                    target.Kill();
             }
         });
+    }
+
+    public override bool CostCheck(Unit caster)
+    {
+        TarotsManager tm = TarotsManager.Instance;
+
+        if (tm && tm.HasTarot(tarotNeeded))
+        {
+            HangedManEffect hangedMan = tm.GetTarotByID(tarotNeeded).Effect as HangedManEffect;
+            return hangedMan.HasStack();
+        }
+        else
+        {
+            if (GameManager.Instance.Player.Inventory.HasItem(itemNeeded))
+                return true;
+            else
+                return ManaCheck(caster);
+        }
+    }
+
+    public override void UseCost(Unit caster)
+    {
+        TarotsManager tm = TarotsManager.Instance;
+
+        if (tm && tm.HasTarot(tarotNeeded))
+        {
+            if (tm.GetTarotByID(tarotNeeded).Effect is HangedManEffect hangedMan && hangedMan.HasStack())
+            {
+                hangedMan.UseStack();
+            }
+        }
+        else
+        {
+            if (GameManager.Instance.Player.Inventory.HasItem(itemNeeded))
+            {
+                GameManager.Instance.Player.Inventory.RemoveItem(itemNeeded, 1);
+            }
+            else
+            {
+                ManaUse(caster);
+            }
+        }
     }
 }

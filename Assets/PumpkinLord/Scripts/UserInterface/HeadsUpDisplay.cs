@@ -3,11 +3,7 @@ using UnityEngine;
 
 public class HeadsUpDisplay : MonoBehaviour
 {
-    [SerializeField] private RectTransform gameUI;
-
-    [Header("Animation")]
-    [SerializeField] private float gameUIHidePosition = -200f;
-    [SerializeField] private float gameUIDuration = 0.5f;
+    [SerializeField] private PlayerInfoUI playerInfoUI;
 
     [Header("Shop UI")]
     [SerializeField] private ShopUI shop;
@@ -21,34 +17,29 @@ public class HeadsUpDisplay : MonoBehaviour
         EventManager.Instance.AddListener<CloseShopEvent>(OnCloseShop);
     }
 
-    public void HideUI()
-    {
-        gameUI.DOAnchorPosY(gameUIHidePosition, gameUIDuration);
-    }
-
-    public void ShowUI()
-    {
-        gameUI.DOAnchorPosY(0, gameUIDuration);
-    }
-
     private void OnDialogueStart(StartDialogueEvent e)
     {
-        HideUI();
+        playerInfoUI.HideAll();
     }
 
     private void OnDialogueEnded(FinishDialogueEvent e)
     {
-        ShowUI();
+        playerInfoUI.ShowAll();
     }
 
     private void OnCloseShop(CloseShopEvent e)
     {
-        ShowUI();
+        playerInfoUI.Health.Show();
+        playerInfoUI.DiceThrow.Show();
+        playerInfoUI.Stats.Show();
     }
 
     private void OnOpenShop(OpenShopEvent e)
     {
-        HideUI();
+        playerInfoUI.Health.Hide();
+        playerInfoUI.DiceThrow.Hide();
+        playerInfoUI.Stats.Hide();
+
         shop.OpenShop();
     }
 }

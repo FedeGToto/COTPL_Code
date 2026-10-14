@@ -9,6 +9,8 @@ public class InputManager : MonoBehaviour
     [field: SerializeField] public InputContext Context { get; private set; }
 
     [SerializeField] private string dialogueAdvanceString = "DialogueAdvance";
+    [SerializeField] private string changePageString = "ChangePage";
+    [SerializeField] private string uiCancelString = "UICancel";
     [SerializeField] private string pauseString = "Pause";
     [SerializeField] private string diceThrowString = "DiceThrown";
 
@@ -17,6 +19,8 @@ public class InputManager : MonoBehaviour
 
     // Dialogue Events
     public UnityAction OnDialogueAdvance;
+    public UnityAction<bool> OnChangePage;
+    public UnityAction OnUICancel;
     public UnityAction OnPause;
     public UnityAction OnDiceThrow;
 
@@ -36,6 +40,20 @@ public class InputManager : MonoBehaviour
         if (playerControls.GetButtonDown(dialogueAdvanceString))
         {
             OnDialogueAdvance?.Invoke();
+        }
+
+        if (playerControls.GetButtonDown(uiCancelString))
+        {
+            OnUICancel?.Invoke();
+        }
+
+        if (playerControls.GetButtonDown(changePageString))
+        {
+            OnChangePage?.Invoke(true);
+        }
+        if (playerControls.GetNegativeButtonDown(changePageString))
+        {
+            OnChangePage?.Invoke(false);
         }
 
         if (playerControls.GetButtonDown(pauseString))

@@ -1,5 +1,6 @@
 EXTERNAL MoveTo(boxType)
 EXTERNAL StartBattle(enemyId)
+EXTERNAL StartBoss(enemyId)
 EXTERNAL StartNextTurn()
 
 ===HorseDialogue===
@@ -31,5 +32,9 @@ You need 20 Souls to challenge the Protector of the Church.  #portrait:none #spe
 ->END
 
 ===IchabodDialogue===
-~StartBattle("Ichabod")
+~StartBoss("Ichabod")
+->END
+
+===KatrinaDialogue===
+~StartBoss("KatrinaVanTassel")
 ->END

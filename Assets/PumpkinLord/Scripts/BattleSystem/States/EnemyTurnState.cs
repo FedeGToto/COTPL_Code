@@ -1,18 +1,15 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class EnemyTurnState : State<BattleSystem>
+public class EnemyTurnState : UnitTurnState
 {
-    private Timer nextTurnTimer;
-    private BattleSystem owner;
-
     public override void EnterState(BattleSystem owner)
     {
-        this.owner = owner;
+        base.EnterState(owner);
 
         owner.EnemyUnit.Status.CheckStartTurn();
 
-        owner.UI.TextBox.SetText(owner.UI.EnemyTurnText.GetLocalizedString()).OnComplete(() =>
+        owner.UI.TextBox.SetText(owner.UI.EnemyTurnText.GetLocalizedString(), () =>
         {
             owner.EnemyUnit.GetComponentInChildren<Enemy>().AI.EvaluateNextAction();
         });
@@ -23,18 +20,13 @@ public class EnemyTurnState : State<BattleSystem>
         owner.EnemyUnit.Status.CheckEndTurn();
     }
 
-    public override void UpdateState(BattleSystem owner)
+    public override void EndTurn(float endTurnDuration)
     {
-        nextTurnTimer?.Update();
-    }
+        base.EndTurn(endTurnDuration);
 
-    public void EndTurn(float endTurnDuration)
-    {
-        nextTurnTimer = new Timer(endTurnDuration);
-        nextTurnTimer.Start();
-        nextTurnTimer.OnTimerStop += () =>
+        NextTurnTimer.OnTimerStop += () =>
         {
-            owner.FSM.ChangeState(new PlayerTurnState());
+            Owner.FSM.ChangeState(new PlayerTurnState());
         };
     }
 }

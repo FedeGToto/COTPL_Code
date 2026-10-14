@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f079ed692cc15c4d9a145efe7ed276b, type: 3}
+  m_Name: TheMagician
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: tarot_magician
+  tarotName:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 555101515776
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tarotDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:db46ae9adda7f1546abd06c2cbfa4315
+    m_TableEntryReference:
+      m_KeyId: 593357762560
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: meritValue
+      variable:
+        rid: 8100677334353838382
+    - name: demeritValue
+      variable:
+        rid: 8100677334353838383
+  icon: {fileID: 21300000, guid: 0ccc245ca5d83184ba9ac94e01e41d9a, type: 3}
+  effect:
+    rid: 8100677334353838384
+  references:
+    version: 2
+    RefIds:
+    - rid: 8100677334353838382
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 23
+    - rid: 8100677334353838383
+      type: {class: FloatVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 15.000001
+    - rid: 8100677334353838384
+      type: {class: MagicianEffect, ns: , asm: Assembly-CSharp}
+      data:
+        spellBuff:
+          rid: 8100677364910391376
+        effectivness:
+          Values:
+          - 0.2
+          - 0.23
+          - 0.26
+          - 0.29
+          - 0.32
+        spellDebuff:
+          rid: 8100677364910391390
+        manaConsumption:
+          Values:
+          - 0.1
+          - 0.15
+          - 0.2
+          - 0.25
+          - 0.3
+    - rid: 8100677364910391376
+      type: {class: SpellModifierEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <Artwork>k__BackingField: {fileID: 21300000, guid: c22d4a7c4c7fdd14aa8da00d5a12471c, type: 3}
+        <StatusName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 121620842737664
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 121714409271296
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        ModifierValue: 0
+    - rid: 8100677364910391390
+      type: {class: CostModifierEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <Artwork>k__BackingField: {fileID: 21300000, guid: 5c76aa76b7711754696a5711d5a0f31b, type: 3}
+        <StatusName>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 143547795828736
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        <StatusDescription>k__BackingField:
+          m_TableReference:
+            m_TableCollectionName: GUID:9205b243fad61954dbeacb44ccac43e4
+          m_TableEntryReference:
+            m_KeyId: 143609221410816
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        ModifierValue: 0
